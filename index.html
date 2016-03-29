@@ -290,7 +290,7 @@
 	var myApp = angular.module('myApp', []);
 
 	myApp.controller('MyController', function($scope, $http){
-		$http.get('../public/js/places.json').success(function(data){
+		$http.get('js/places.json').success(function(data){
 			$scope.places = data;
 		});
 	});
