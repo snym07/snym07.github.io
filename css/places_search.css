@@ -1,0 +1,16 @@
+body{
+	background-color: #F5F5F5;
+}
+
+.logo{
+	margin: 20px auto;
+}
+
+.labels label{
+	margin: 5px 20px;
+}
+
+.distance-slider{
+	margin: 50px 25px 10px;
+}
+

@@ -1,0 +1,513 @@
+[
+	{
+	"name" : "Red Fort",
+	"address" : "Netaji Subhash Marg, Chandni Chowk, New Delhi, Delhi 110006",
+	"coordinates" : "28.656 77.241",
+	"metro_station" : "Chandni Chowk",
+	"metro_line" : "Yellow",
+	"merto_distance" : 1000,
+	"area" : "Old Delhi",
+	"category" : "Monuments"
+	},
+	{
+	"name" : "Qutub Minar",
+	"address" : "Mehrauli, New Delhi, Delhi 110030",
+	"coordinates" : "28.524 77.185",
+	"metro_station" : "Qutub Minar",
+	"metro_line" : "Yellow",
+	"merto_distance" : 1700,
+	"area" : "South Delhi",
+	"category" : "Monuments"
+	},
+	{
+	"name" : "Humayun's Tomb",
+	"address" : "Mathura Road, Nizamuddin, New Delhi, Delhi 110013",
+	"coordinates" : "28.593 77.251",
+	"metro_station" : "JLN Stadium",
+	"metro_line" : "Violet",
+	"merto_distance" : 1200,
+	"area" : "South Delhi",
+	"category" : "Monuments"
+	},
+	{
+	"name" : "Safdarjung's Tomb",
+	"address" : "New Delhi, Delhi",
+	"coordinates" : "28.589 77.211",
+	"metro_station" : "Jorbagh",
+	"metro_line" : "Yellow",
+	"merto_distance" : 650,
+	"area" : "New Delhi",
+	"category" : "Monuments"
+	},
+	{
+	"name" : "India Gate",
+	"address" : "Rajpath, India Gate, New Delhi, Delhi 110001",
+	"coordinates" : "28.615 77.229",
+	"metro_station" : "Central Secretariat",
+	"metro_line" : "Yellow",
+	"merto_distance" : 1700,
+	"area" : "New Delhi",
+	"category" : "Monuments"
+	},
+	{
+	"name" : "Tughlakabad Fort",
+	"address" : "Tughlakabad, New Delhi, Delhi",
+	"coordinates" : "28.514 77.260",
+	"metro_station" : "Tughlakabad",
+	"metro_line" : "Violet",
+	"merto_distance" : 4800,
+	"area" : "South Delhi",
+	"category" : "Monuments"
+	},
+	{
+	"name" : "Rashtrapati bhavan",
+	"address" : "New Delhi, Delhi 110004",
+	"coordinates" : "28.614 77.200",
+	"metro_station" : "Central Secretariat",
+	"metro_line" : "Yellow",
+	"merto_distance" : 950,
+	"area" : "New Delhi",
+	"category" : "Monuments"
+	},
+	{
+	"name" : "Teen Murti Bhavan",
+	"address" : "Teen Murti Bhavan, Teen Murti Marg, New Delhi",
+	"coordinates" : "28.603 77.199",
+	"metro_station" : "Race Cource",
+	"metro_line" : "Yellow",
+	"merto_distance" : 1800,
+	"area" : "New Delhi",
+	"category" : "Museum"
+	},
+	{
+	"name" : "Kushak Mahal",
+	"address" : "Teen Murti Bhavan, Teen Murti Marg, New Delhi",
+	"coordinates" : "28.603 77.199",
+	"metro_station" : "Race Cource",
+	"metro_line" : "Yellow",
+	"merto_distance" : 1800,
+	"area" : "New Delhi",
+	"category" : "Museum"
+	},
+	{
+	"name" : "Jama Masjid",
+	"address" : "Chandni Chowk, New Delhi, Delhi",
+	"coordinates" : "28.651 77.235",
+	"metro_station" : "Chawri Bazar",
+	"metro_line" : "Yellow",
+	"merto_distance" : 600,
+	"area" : "Old Delhi",
+	"category" : "Holy Places"
+	},
+	{
+	"name" : "Bangla Sahib",
+	"address" : "Ashoka Road, Connaught Place,Next to Grand Post Office, New Delhi, Delhi 110001",
+	"coordinates" : "28.626 77.209",
+	"metro_station" : "Rajeev Chowk",
+	"metro_line" : "Blue",
+	"merto_distance" : 700,
+	"area" : "New Delhi",
+	"category" : "Holy Places"
+	},
+	{
+	"name" : "Sis Ganj Sahib",
+	"address" : "Near Red Fort, Chandni Chowk Road, New Delhi, Delhi 110006",
+	"coordinates" : "28.656 77.232",
+	"metro_station" : "Chandni Chowk",
+	"metro_line" : "Yellow",
+	"merto_distance" : 300,
+	"area" : "Old Delhi",
+	"category" : "Holy Places"
+	},
+	{
+	"name" : "Rajghat",
+	"address" : "New Delhi, Delhi 110006",
+	"coordinates" : "28.640 77.249",
+	"metro_station" : "ITO",
+	"metro_line" : "Violet",
+	"merto_distance" : 1800,
+	"area" : "New Delhi",
+	"category" : "Monuments"
+	},
+	{
+	"name" : "Shantivan",
+	"address" : "Shanti Van, Raj Ghat, New Delhi, Delhi 110002",
+	"coordinates" : "28.640 77.249",
+	"metro_station" : "ITO",
+	"metro_line" : "Violet",
+	"merto_distance" : 1800,
+	"area" : "New Delhi",
+	"category" : "Monuments"
+	},
+	{
+	"name" : "Shakti Sthal",
+	"address" : "Shakti Sthal, Raj Ghat, New Delhi, Delhi 110002",
+	"coordinates" : "28.640 77.249",
+	"metro_station" : "ITO",
+	"metro_line" : "Violet",
+	"merto_distance" : 1800,
+	"area" : "New Delhi",
+	"category" : "Monuments"
+	},
+	{
+	"name" : "Vir Bhoomi",
+	"address" : "Vir Bhoomi, Raj Ghat, New Delhi, Delhi 110002",
+	"coordinates" : "28.640 77.249",
+	"metro_station" : "ITO",
+	"metro_line" : "Violet",
+	"merto_distance" : 1800,
+	"area" : "New Delhi",
+	"category" : "Monuments"
+	},
+	{
+	"name" : "Feroze Shah Kotla Palace",
+	"address" : "Balmiki Basti, Vikram Nagar, New Delhi, Delhi 110002",
+	"coordinates" : "28.635 77.239",
+	"metro_station" : "ITO",
+	"metro_line" : "Violet",
+	"merto_distance" : 1000,
+	"area" : "New Delhi",
+	"category" : "Monuments"
+	},
+	{
+	"name" : "National Rail Museum",
+	"address" : "Shanti Path, Chanakyapuri, New Delhi, Delhi 110021",
+	"coordinates" : "28.585 77.181",
+	"metro_station" : "Jorbagh",
+	"metro_line" : "Yellow",
+	"merto_distance" : 5000,
+	"area" : "New Delhi",
+	"category" : "Museum"
+	},
+	{
+	"name" : "Nehru Planetarium",
+	"address" : "Teen Murti Bhavan, New Delhi, Delhi 110011",
+	"coordinates" : "28.603 77.199",
+	"metro_station" : "Race Cource",
+	"metro_line" : "Yellow",
+	"merto_distance" : 1800,
+	"area" : "New Delhi",
+	"category" : "Museum"
+	},
+	{
+	"name" : "Adventure Island",
+	"address" : "Opposite Rithala Metro Station, Sector 10, Rohini, New Delhi, Delhi 110085",
+	"coordinates" : "28.724 77.115",
+	"metro_station" : "Dwarka Sector 21",
+	"metro_line" : "Blue",
+	"merto_distance" : 750,
+	"area" : "North Delhi",
+	"category" : "Leisure"
+	},
+	{
+	"name" : "Fun n Food",
+	"address" : "Old Delhi Gurgaon Road, Kapshera, New Delhi, Delhi 110037",
+	"coordinates" : "28.523 77.084",
+	"metro_station" : "Dwarka Sector 21",
+	"metro_line" : "Blue",
+	"merto_distance" : 6500,
+	"area" : "Old Delhi",
+	"category" : "Leisure"
+	},
+	{
+	"name" : "Delhi Rides",
+	"address" : "Kalindi Kunj Park, Okhla, New Delhi, Delhi 110001",
+	"coordinates" : "28.546 77.309",
+	"metro_station" : "Jasola Appolo",
+	"metro_line" : "Violet",
+	"merto_distance" : 3300,
+	"area" : "South Delhi",
+	"category" : "Leisure"
+	},
+	{
+	"name" : "Sanjay Van",
+	"address" : "Sanjay Van, New Delhi, Delhi",
+	"coordinates" : "28.533 77.177",
+	"metro_station" : "Saket",
+	"metro_line" : "Yellow",
+	"merto_distance" : 3300,
+	"area" : "South Delhi",
+	"category" : "garden-park"
+	},
+	{
+	"name" : "Parthasarathy Rocks",
+	"address" : "Parthasarathy Rocks, Jawaharlal Nehru University, New Delhi, Delhi 110067",
+	"coordinates" : "28.546 77.170",
+	"metro_station" : "Hauz khas",
+	"metro_line" : "Yellow",
+	"merto_distance" : 5300,
+	"area" : "South Delhi",
+	"category" : "garden-park"
+	},
+	{
+	"name" : "Dear Park",
+	"address" : "Hauz Khas, New Delhi, Delhi 110016",
+	"coordinates" : "28.557 77.196",
+	"metro_station" : "Green Park",
+	"metro_line" : "Yellow",
+	"merto_distance" : 1200,
+	"area" : "South Delhi",
+	"category" : "garden-park"
+	},
+	{
+	"name" : "National Rose Garden",
+	"address" : "Satya Marg, Chanakyapuri, New Delhi, Delhi 110021",
+	"coordinates" : "28.588 77.185",
+	"metro_station" : "INA",
+	"metro_line" : "Yellow",
+	"merto_distance" : 3600,
+	"area" : "New Delhi",
+	"category" : "garden-park"
+	},
+	{
+	"name" : "Hauz Khas Village",
+	"address" : "Purple Loft, 23, Hauz Khas Tank, Deer Park, Hauz Khas, New Delhi, Delhi 110016",
+	"coordinates" : "28.554 77.194",
+	"metro_station" : "Green Park",
+	"metro_line" : "Yellow",
+	"merto_distance" : 1900,
+	"area" : "South Delhi",
+	"category" : "Monuments"
+	},
+	{
+	"name" : "Coronation Park",
+	"address" : "Shanti Swaroop Tyagi Marg, Model Town, New Delhi, Delhi 110033",
+	"coordinates" : "28.723 77.197",
+	"metro_station" : "Model Town",
+	"metro_line" : "Yellow",
+	"merto_distance" : 3200,
+	"area" : "New Delhi",
+	"category" : "Monuments"
+	},
+	{
+	"name" : "Buddha Jayanti Park",
+	"address" : "Vandemataram Marg, Central Ridge Reserve Forest, New Delhi, Delhi 110021",
+	"coordinates" : "28.616 77.177",
+	"metro_station" : "Central Secretariat",
+	"metro_line" : "Yellow",
+	"merto_distance" : 3200,
+	"area" : "New Delhi",
+	"category" : "garden-park"
+	},
+	{
+	"name" : "Lakshmi Narayan Mandir",
+	"address" : "Mandir Marg, New Delhi, Delhi 110001",
+	"coordinates" : "28.633 77.199",
+	"metro_station" : "R K Ashram Marg",
+	"metro_line" : "Blue",
+	"merto_distance" : 1400,
+	"area" : "West Delhi",
+	"category" : "Holy Places"
+	},
+	{
+	"name" : "Akshardham",
+	"address" : "Noida Mor, New Delhi, Delhi 110092",
+	"coordinates" : "28.613 77.277",
+	"metro_station" : "Akshardham",
+	"metro_line" : "Blue",
+	"merto_distance" : 750,
+	"area" : "East Delhi",
+	"category" : "Holy Places"
+	},
+	{
+	"name" : "Majnu ka Tilla (Tibetan Market)",
+	"address" : "Majnu Ka Tilla, New Aruna Nagar, New Delhi, Delhi",
+	"coordinates" : "28.656 77.241",
+	"metro_station" : "Vishwavidyalaya",
+	"metro_line" : "Yellow",
+	"merto_distance" : 2000,
+	"area" : "North Delhi",
+	"category" : "Shopping"
+	},
+	{
+	"name" : "Lotus Temple",
+	"address" : "Lotus Temple Rd, Shambhu Dayal Bagh, Bahapur, Kalkaji, New Delhi, Delhi 110019",
+	"coordinates" : "28.553 77.259",
+	"metro_station" : "Kalkaji",
+	"metro_line" : "Violet",
+	"merto_distance" : 900,
+	"area" : "South Delhi",
+	"category" : "Monuments"
+	},
+	{
+	"name" : "Kalkaji Temple",
+	"address" : "Govindpuri, New Delhi, Delhi 110019",
+	"coordinates" : "28.550 77.261",
+	"metro_station" : "Kalkaji",
+	"metro_line" : "Violet",
+	"merto_distance" : 400,
+	"area" : "South Delhi",
+	"category" : "Holy Places"
+	},
+	{
+	"name" : "Purana Qila",
+	"address" : "Mathura Rd, New Delhi, Delhi 110003",
+	"coordinates" : "28.609 77.244",
+	"metro_station" : "Khan Market",
+	"metro_line" : "Violet",
+	"merto_distance" : 2000,
+	"area" : "New Delhi",
+	"category" : "Monuments"
+	},
+	{
+	"name" : "Old Fort Lake",
+	"address" : "Mathura Rd, Pragati Maidan, New Delhi, Delhi 110002",
+	"coordinates" : "28.611 77.241",
+	"metro_station" : "Khan Market",
+	"metro_line" : "Violet",
+	"merto_distance" : 2000,
+	"area" : "New Delhi",
+	"category" : "Leisure"
+	},
+	{
+	"name" : "National Zoological Park",
+	"address" : "Mathura Road, New Delhi, Delhi 110003",
+	"coordinates" : "28.602 77.248",
+	"metro_station" : "Khan Market",
+	"metro_line" : "Violet",
+	"merto_distance" : 2000,
+	"area" : "New Delhi",
+	"category" : "Leisure"
+	},
+	{
+	"name" : "Meena Bazaar",
+	"address" : "Meena Bazaar, Jama Masjid, Chandni Chowk, New Delhi, Delhi",
+	"coordinates" : "28.651 77.236",
+	"metro_station" : "Chandni Chowk",
+	"metro_line" : "Yellow",
+	"merto_distance" : 1200,
+	"area" : "Old Delhi",
+	"category" : "Shopping"
+	},
+	{
+	"name" : "Chandni Chowk",
+	"address" : "Chandni Chowk, New Delhi, Delhi 110006",
+	"coordinates" : "28.656 77.229",
+	"metro_station" : "Chandni Chowk",
+	"metro_line" : "Yellow",
+	"merto_distance" : 0,
+	"area" : "Old Delhi",
+	"category" : "Shopping"
+	},
+	{
+	"name" : "Daryaganj",
+	"address" : "Daryaganj, Old Delhi, Delhi",
+	"coordinates" : "28.645 77.240",
+	"metro_station" : "Chawri Bazaar",
+	"metro_line" : "Yellow",
+	"merto_distance" : 1900,
+	"area" : "Old Delhi",
+	"category" : "Shopping"
+	},
+	{
+	"name" : "Sarojini Nagar",
+	"address" : "Sarojini Nagar, New Delhi, Delhi 110023",
+	"coordinates" : "28.577 77.196",
+	"metro_station" : "INA",
+	"metro_line" : "Yellow",
+	"merto_distance" : 1700,
+	"area" : "New Delhi",
+	"category" : "Shopping"
+	},
+	{
+	"name" : "Lajpat Nagar (Central Market)",
+	"address" : "Central Market, Lajpat Nagar II, Lajpat Nagar, New Delhi, Delhi 110024",
+	"coordinates" : "28.569 77.242",
+	"metro_station" : "Lajpat Nagar",
+	"metro_line" : "Violet",
+	"merto_distance" : 650,
+	"area" : "South Delhi",
+	"category" : "Shopping"
+	},
+	{
+	"name" : "Central Park (CP)",
+	"address" : "Rajeev Chowk, Connaught Place, New Delhi, Delhi 110001",
+	"coordinates" : "28.633 77.219",
+	"metro_station" : "Rajeev Chowk",
+	"metro_line" : "Blue",
+	"merto_distance" : 100,
+	"area" : "New Delhi",
+	"category" : "garden-park"
+	},
+	{
+	"name" : "Palika Bazaar",
+	"address" : "Rajeev Chowk, Near Connaught Place, New Delhi, Delhi 110001",
+	"coordinates" : "28.631 77.219",
+	"metro_station" : "Rajeev Chowk",
+	"metro_line" : "Blue",
+	"merto_distance" : 100,
+	"area" : "New Delhi",
+	"category" : "Shopping"
+	},
+	{
+	"name" : "Red Fort",
+	"address" : "Netaji Subhash Marg, Chandni Chowk, New Delhi, Delhi 110006",
+	"coordinates" : "28.656 77.241",
+	"metro_station" : "Chandni Chowk",
+	"metro_line" : "Yellow",
+	"merto_distance" : "1 Km",
+	"area" : "Old Delhi",
+	"category" : "Monuments"
+	},
+	{
+	"name" : "Red Fort",
+	"address" : "Netaji Subhash Marg, Chandni Chowk, New Delhi, Delhi 110006",
+	"coordinates" : "28.656 77.241",
+	"metro_station" : "Chandni Chowk",
+	"metro_line" : "Yellow",
+	"merto_distance" : "1 Km",
+	"area" : "Old Delhi",
+	"category" : "Monuments"
+	},
+	{
+	"name" : "Red Fort",
+	"address" : "Netaji Subhash Marg, Chandni Chowk, New Delhi, Delhi 110006",
+	"coordinates" : "28.656 77.241",
+	"metro_station" : "Chandni Chowk",
+	"metro_line" : "Yellow",
+	"merto_distance" : "1 Km",
+	"area" : "Old Delhi",
+	"category" : "Monuments"
+	},
+	{
+	"name" : "Red Fort",
+	"address" : "Netaji Subhash Marg, Chandni Chowk, New Delhi, Delhi 110006",
+	"coordinates" : "28.656 77.241",
+	"metro_station" : "Chandni Chowk",
+	"metro_line" : "Yellow",
+	"merto_distance" : "1 Km",
+	"area" : "Old Delhi",
+	"category" : "Monuments"
+	},
+	{
+	"name" : "Red Fort",
+	"address" : "Netaji Subhash Marg, Chandni Chowk, New Delhi, Delhi 110006",
+	"coordinates" : "28.656 77.241",
+	"metro_station" : "Chandni Chowk",
+	"metro_line" : "Yellow",
+	"merto_distance" : "1 Km",
+	"area" : "Old Delhi",
+	"category" : "Monuments"
+	},
+	{
+	"name" : "Red Fort",
+	"address" : "Netaji Subhash Marg, Chandni Chowk, New Delhi, Delhi 110006",
+	"coordinates" : "28.656 77.241",
+	"metro_station" : "Chandni Chowk",
+	"metro_line" : "Yellow",
+	"merto_distance" : "1 Km",
+	"area" : "Old Delhi",
+	"category" : "Monuments"
+	},
+	{
+	"name" : "Red Fort",
+	"address" : "Netaji Subhash Marg, Chandni Chowk, New Delhi, Delhi 110006",
+	"coordinates" : "28.656 77.241",
+	"metro_station" : "Chandni Chowk",
+	"metro_line" : "Yellow",
+	"merto_distance" : "1 Km",
+	"area" : "Old Delhi",
+	"category" : "Monuments"
+	}
+	
+]
