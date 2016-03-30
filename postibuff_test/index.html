@@ -1,0 +1,643 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Postibuff</title>
+
+<!-- meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- to change color of notification bar -->
+		<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#009688">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#009688">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#009688">
+
+<!-- Shortcut icon -->
+	<link rel="shortcut icon" href="images/shortcut_icon.png">
+
+
+<!-- CSS links -->
+  	<link rel="stylesheet" type="text/css" href="css/material.min.css">
+  	<link rel="stylesheet" type="text/css" href="css/places_search.css">
+	
+<!-- Scripts -->
+  	<script type="text/javascript" src="js/material.min.js"></script>
+  	<script type="text/javascript" src="js/angular.min.js"></script>
+
+<!-- google icons -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<!-- roboto font -->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+
+<!--[if IE]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.7/es5-shim.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+<![endif]-->
+
+</head>
+<body ng-app="myApp">
+	
+	<!-- The drawer is always open in large screens. The header is always shown,
+  even in small screens.-->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
+            mdl-layout--fixed-header" ng-controller="MyController">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <div class="mdl-layout-spacer"></div>
+      
+    </div>
+  </header>
+  <div class="mdl-layout__drawer" style="overflow-x:hidden;">
+    <!-- logo -->
+	  	<div class="logo">
+	  		<img src="images/full_logo.png">
+	  	</div>
+
+    <!-- filter tabs -->
+    <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+	  <div class="mdl-tabs__tab-bar">
+	      <a href="#tags" class="mdl-tabs__tab is-active">Tags</a>
+	      <a href="#metro-panel" class="mdl-tabs__tab">Metro</a>
+	      <a href="#area" class="mdl-tabs__tab">Area</a>
+	  </div>
+
+	  <div class="labels mdl-tabs__panel is-active" id="tags">
+	    
+	    	<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="monuments">
+			  <input type="checkbox" id="monuments" class="mdl-checkbox__input" checked>
+			  <span class="mdl-checkbox__label">Monuments</span>
+			</label>
+
+			<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="shopping">
+			  <input type="checkbox" id="shopping" class="mdl-checkbox__input" checked>
+			  <span class="mdl-checkbox__label">Shopping</span>
+			</label>
+
+			<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="street-food">
+			  <input type="checkbox" id="street-food" class="mdl-checkbox__input" checked>
+			  <span class="mdl-checkbox__label">Street Food</span>
+			</label>
+
+			<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="leisure">
+			  <input type="checkbox" id="leisure" class="mdl-checkbox__input" checked>
+			  <span class="mdl-checkbox__label">Leisure</span>
+			</label>
+
+			<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="museums">
+			  <input type="checkbox" id="museums" class="mdl-checkbox__input" checked>
+			  <span class="mdl-checkbox__label">Museums</span>
+			</label>
+
+			<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="holy-places">
+			  <input type="checkbox" id="holy-places" class="mdl-checkbox__input" checked>
+			  <span class="mdl-checkbox__label">Holy Places</span>
+			</label>
+
+			<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="gardens-parks">
+			  <input type="checkbox" id="gardens-park" class="mdl-checkbox__input" checked>
+			  <span class="mdl-checkbox__label">Gardens and Parks</span>
+			</label>
+
+			
+
+	  </div>
+
+
+	  <div class="labels mdl-tabs__panel" id="metro-panel">
+	    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="red-line">
+		  <input type="checkbox" id="red-line" class="mdl-checkbox__input" checked>
+		  <span class="mdl-checkbox__label">Red Line</span>
+		</label>
+
+		<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="yellow-line">
+		  <input type="checkbox" id="yellow-line" class="mdl-checkbox__input" checked>
+		  <span class="mdl-checkbox__label">Yellow Line</span>
+		</label>
+
+		<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="blue-line">
+		  <input type="checkbox" id="blue-line" class="mdl-checkbox__input" checked>
+		  <span class="mdl-checkbox__label">Blue Line</span>
+		</label>
+
+		<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="green-line">
+		  <input type="checkbox" id="green-line" class="mdl-checkbox__input" checked>
+		  <span class="mdl-checkbox__label">Green Line</span>
+		</label>
+
+		<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="violet-line">
+		  <input type="checkbox" id="violet-line" class="mdl-checkbox__input" checked>
+		  <span class="mdl-checkbox__label">Violet Line</span>
+		</label>
+
+		<!-- Slider with Starting Value for distance -->
+		<p class="distance-slider">Distance from metro station</p>
+
+			<input class="mdl-slider mdl-js-slider" type="range"
+			  min="0" max="100" value="25" tabindex="0">
+
+
+
+	  </div>
+
+	  <div class="labels mdl-tabs__panel" id="area">
+	    
+	    	<!-- delhi districts -->
+		<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="new-delhi">
+		  <input type="checkbox" id="new-delhi" class="mdl-checkbox__input" checked>
+		  <span class="mdl-checkbox__label">New Delhi</span>
+		</label>
+
+		<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="old-delhi">
+		  <input type="checkbox" id="old-delhi" class="mdl-checkbox__input" checked>
+		  <span class="mdl-checkbox__label">Old Delhi</span>
+		</label>
+
+		<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="north-delhi">
+		  <input type="checkbox" id="north-delhi" class="mdl-checkbox__input" checked>
+		  <span class="mdl-checkbox__label">North Delhi</span>
+		</label>
+
+		<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="east-delhi">
+		  <input type="checkbox" id="east-delhi" class="mdl-checkbox__input" checked>
+		  <span class="mdl-checkbox__label">East Delhi</span>
+		</label>
+
+		<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="south-delhi">
+		  <input type="checkbox" id="south-delhi" class="mdl-checkbox__input" checked>
+		  <span class="mdl-checkbox__label">South Delhi</span>
+		</label>
+
+		<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="south-west-delhi">
+		  <input type="checkbox" id="south-west-delhi" class="mdl-checkbox__input" checked>
+		  <span class="mdl-checkbox__label">South West Delhi</span>
+		</label>
+
+		<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="west-delhi">
+		  <input type="checkbox" id="west-delhi" class="mdl-checkbox__input" checked>
+		  <span class="mdl-checkbox__label">West Delhi</span>
+		</label>
+
+			
+
+	  </div>
+
+	</div> <!-- end filter tabs -->
+
+
+
+
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+    <!-- content goes here -->
+
+    <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+	  <div class="mdl-tabs__tab-bar">
+	      <a href="#search-places" class="mdl-tabs__tab is-active">Search places</a>
+	      <a href="#our-categories" class="mdl-tabs__tab">Our&nbsp;&nbsp;categories</a>
+	      
+	  </div>
+
+	  <!-- Search places tab -->
+	  <div class="mdl-tabs__panel is-active" id="search-places">
+	    <style type="text/css">
+	.search-bar{
+		
+		margin: 10px auto;
+		
+	}
+
+	.search-bar input[type="text"]{
+		border-radius: 100px;
+		background-color: white;
+		padding: 5px 0;
+		width: 100%;
+		text-align: center;
+		font-size: 1.5em;
+		color: #616161;
+		border: none;
+		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	}
+
+	.search-bar input[type="text"]:focus{
+		outline: none;
+		box-shadow: inset 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	}
+
+	/* style for cards */
+	.demo-card-wide{
+	  width: 100%;
+	  height: 350px;
+	  margin: 20px auto;
+	}
+
+	.demo-card-wide > .mdl-card__title {
+	  color: #fff;
+	  height: 150px;
+	  background: url('') center / cover;
+	}
+	.demo-card-wide > .mdl-card__menu {
+	  color: #fff;
+	}
+
+</style>
+
+<div>
+	<div class="mdl-grid">
+	<div class="search-bar mdl-cell mdl-cell--4-col-desktop">
+		<input type="text" class="search-bar" placeholder="Search" autofocus ng-model="search">
+		
+	</div>
+	
+</div>
+
+<h5 ng-hide="search" class="mdl-typography--text-center mdl-color-text--grey-500">Enter name of any place, monument, museum etc...
+																				 in search bar (Eg: Lotus Temple)</h5>
+
+<div class="mdl-grid">
+	<div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone" 
+	  ng-repeat="item in places | filter:search">
+	  <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+	    <div class="mdl-card__title">
+	      <!-- this title is left blank for image -->
+	    </div>
+	    <div class="mdl-card__supporting-text">
+	      <h4>{{item.name}}</h4>
+	      <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    <path fill="#616161" d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z" />
+</svg>{{item.address | limitTo:25}}...
+	    </div>
+	    <div class="mdl-card__actions mdl-card--border">
+	      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+	        View
+	      </a>
+	    </div>
+	   
+	  </div>
+	</div>
+</div>
+
+</div>
+
+
+<script type="text/javascript">
+	var myApp = angular.module('myApp', []);
+
+	myApp.controller('MyController', function($scope, $http){
+		$http.get('js/places.json').success(function(data){
+			$scope.places = data;
+		});
+	});
+</script>
+
+<!-- <div class="mdl-grid">
+	</div> -->	  </div>
+	  <!-- end search places tab -->
+
+	  <!-- Our categories tab -->
+	  <div class="mdl-tabs__panel" id="our-categories">
+	    <div class="mdl-grid">
+			<!-- Wide card with share menu button -->
+<style>
+
+.demo-card-wide{
+  width: 100%;
+  margin: 20px auto;
+}
+
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 150px;
+  background: url('<br />
+<b>Notice</b>:  Undefined variable: row in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>12</b><br />
+') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+</style>
+
+<div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+  <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+      <!-- this title is left black for image -->
+    </div>
+    <div class="mdl-card__supporting-text">
+      <h4><br />
+<b>Notice</b>:  Undefined variable: name in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>25</b><br />
+</h4>
+      <br />
+<b>Notice</b>:  Undefined variable: location in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>26</b><br />
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+        View
+      </a>
+    </div>
+    
+  </div>
+</div>
+<!-- Wide card with share menu button -->
+<style>
+
+.demo-card-wide{
+  width: 100%;
+  margin: 20px auto;
+}
+
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 150px;
+  background: url('<br />
+<b>Notice</b>:  Undefined variable: row in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>12</b><br />
+') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+</style>
+
+<div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+  <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+      <!-- this title is left black for image -->
+    </div>
+    <div class="mdl-card__supporting-text">
+      <h4><br />
+<b>Notice</b>:  Undefined variable: name in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>25</b><br />
+</h4>
+      <br />
+<b>Notice</b>:  Undefined variable: location in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>26</b><br />
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+        View
+      </a>
+    </div>
+    
+  </div>
+</div>
+<!-- Wide card with share menu button -->
+<style>
+
+.demo-card-wide{
+  width: 100%;
+  margin: 20px auto;
+}
+
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 150px;
+  background: url('<br />
+<b>Notice</b>:  Undefined variable: row in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>12</b><br />
+') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+</style>
+
+<div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+  <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+      <!-- this title is left black for image -->
+    </div>
+    <div class="mdl-card__supporting-text">
+      <h4><br />
+<b>Notice</b>:  Undefined variable: name in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>25</b><br />
+</h4>
+      <br />
+<b>Notice</b>:  Undefined variable: location in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>26</b><br />
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+        View
+      </a>
+    </div>
+    
+  </div>
+</div>
+<!-- Wide card with share menu button -->
+<style>
+
+.demo-card-wide{
+  width: 100%;
+  margin: 20px auto;
+}
+
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 150px;
+  background: url('<br />
+<b>Notice</b>:  Undefined variable: row in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>12</b><br />
+') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+</style>
+
+<div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+  <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+      <!-- this title is left black for image -->
+    </div>
+    <div class="mdl-card__supporting-text">
+      <h4><br />
+<b>Notice</b>:  Undefined variable: name in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>25</b><br />
+</h4>
+      <br />
+<b>Notice</b>:  Undefined variable: location in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>26</b><br />
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+        View
+      </a>
+    </div>
+    
+  </div>
+</div>
+<!-- Wide card with share menu button -->
+<style>
+
+.demo-card-wide{
+  width: 100%;
+  margin: 20px auto;
+}
+
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 150px;
+  background: url('<br />
+<b>Notice</b>:  Undefined variable: row in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>12</b><br />
+') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+</style>
+
+<div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+  <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+      <!-- this title is left black for image -->
+    </div>
+    <div class="mdl-card__supporting-text">
+      <h4><br />
+<b>Notice</b>:  Undefined variable: name in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>25</b><br />
+</h4>
+      <br />
+<b>Notice</b>:  Undefined variable: location in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>26</b><br />
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+        View
+      </a>
+    </div>
+    
+  </div>
+</div>
+<!-- Wide card with share menu button -->
+<style>
+
+.demo-card-wide{
+  width: 100%;
+  margin: 20px auto;
+}
+
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 150px;
+  background: url('<br />
+<b>Notice</b>:  Undefined variable: row in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>12</b><br />
+') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+</style>
+
+<div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+  <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+      <!-- this title is left black for image -->
+    </div>
+    <div class="mdl-card__supporting-text">
+      <h4><br />
+<b>Notice</b>:  Undefined variable: name in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>25</b><br />
+</h4>
+      <br />
+<b>Notice</b>:  Undefined variable: location in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>26</b><br />
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+        View
+      </a>
+    </div>
+    
+  </div>
+</div>
+<!-- Wide card with share menu button -->
+<style>
+
+.demo-card-wide{
+  width: 100%;
+  margin: 20px auto;
+}
+
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 150px;
+  background: url('<br />
+<b>Notice</b>:  Undefined variable: row in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>12</b><br />
+') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+</style>
+
+<div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+  <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+      <!-- this title is left black for image -->
+    </div>
+    <div class="mdl-card__supporting-text">
+      <h4><br />
+<b>Notice</b>:  Undefined variable: name in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>25</b><br />
+</h4>
+      <br />
+<b>Notice</b>:  Undefined variable: location in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>26</b><br />
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+        View
+      </a>
+    </div>
+    
+  </div>
+</div>
+<!-- Wide card with share menu button -->
+<style>
+
+.demo-card-wide{
+  width: 100%;
+  margin: 20px auto;
+}
+
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 150px;
+  background: url('<br />
+<b>Notice</b>:  Undefined variable: row in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>12</b><br />
+') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+</style>
+
+<div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+  <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+      <!-- this title is left black for image -->
+    </div>
+    <div class="mdl-card__supporting-text">
+      <h4><br />
+<b>Notice</b>:  Undefined variable: name in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>25</b><br />
+</h4>
+      <br />
+<b>Notice</b>:  Undefined variable: location in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>26</b><br />
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+        View
+      </a>
+    </div>
+    
+  </div>
+</div>
+		</div>
+	  </div> 
+	  <!-- end our categories tab -->
+	
+	</div>
+
+    </div>
+  </main>
+</div>
+
+</body>
+</html>
+
+<!-- 
+
+1) Ten haunted places in delhi
+
+ -->
