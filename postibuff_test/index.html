@@ -136,10 +136,10 @@
 		</label>
 
 		<!-- Slider with Starting Value for distance -->
-		<p class="distance-slider">Distance from metro station : <br>{{slider}} meters</p>
+		<p class="distance-slider">Distance from metro station</p>
 
 			<input class="mdl-slider mdl-js-slider" type="range"
-			  min="0" max="10000" value="0" step="100" tabindex="0" ng-model="slider">
+			  min="0" max="100" value="25" tabindex="0">
 
 
 
@@ -235,20 +235,15 @@
 	  width: 100%;
 	  height: 350px;
 	  margin: 20px auto;
-	  
 	}
 
 	.demo-card-wide > .mdl-card__title {
 	  color: #fff;
-	  height: 200px;
-	  background: url('images/drew2.jpg') center / cover;
+	  height: 150px;
+	  background: url('') center / cover;
 	}
 	.demo-card-wide > .mdl-card__menu {
 	  color: #fff;
-	}
-
-	.demo-card-wide h4{
-		margin: 0;
 	}
 
 </style>
@@ -256,7 +251,7 @@
 <div>
 	<div class="mdl-grid">
 	<div class="search-bar mdl-cell mdl-cell--4-col-desktop">
-		<input type="text" class="search-bar" placeholder="Search" autofocus ng-model="search.name">
+		<input type="text" class="search-bar" placeholder="Search" autofocus ng-model="search">
 		
 	</div>
 	
@@ -265,368 +260,9 @@
 <h5 ng-hide="search" class="mdl-typography--text-center mdl-color-text--grey-500">Enter name of any place, monument, museum etc...
 																				 in search bar (Eg: Lotus Temple)</h5>
 
-<div ng-show="showLoader">
-	    
-<style>
-      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
-      body,
-html {
-  height: 100%;
-}
-body {
-  background: #FAFAFA;
-}
-.pin {
-  width: 30px;
-  height: 30px;
-  -webkit-border-radius: 50% 50% 50% 0;
-  border-radius: 50% 50% 50% 0;
-  background: #00897B;
-  position: absolute;
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  left: 50%;
-  top: 50%;
-  margin: -20px 0 0 -20px;
-  -webkit-animation-name: bounce;
-  -moz-animation-name: bounce;
-  -o-animation-name: bounce;
-  -ms-animation-name: bounce;
-  animation-name: bounce;
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  -ms-animation-duration: 1s;
-  animation-duration: 1s;
-}
-.pin:after {
-  content: '';
-  width: 14px;
-  height: 14px;
-  margin: 8px 0 0 8px;
-  background: #FAFAFA;
-  position: absolute;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-}
-.pulse {
-  background: rgba(0,0,0,0.2);
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  height: 14px;
-  width: 14px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin: 11px 0px 0px -12px;
-  -webkit-transform: rotateX(55deg);
-  -moz-transform: rotateX(55deg);
-  -o-transform: rotateX(55deg);
-  -ms-transform: rotateX(55deg);
-  transform: rotateX(55deg);
-  z-index: -2;
-}
-.pulse:after {
-  content: "";
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
-  position: absolute;
-  margin: -13px 0 0 -13px;
-  -webkit-animation: pulsate 1s ease-out;
-  -moz-animation: pulsate 1s ease-out;
-  -o-animation: pulsate 1s ease-out;
-  -ms-animation: pulsate 1s ease-out;
-  animation: pulsate 1s ease-out;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-  -ms-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
-  -webkit-box-shadow: 0 0 1px 2px #89849b;
-  box-shadow: 0 0 1px 2px #89849b;
-  -webkit-animation-delay: 1.1s;
-  -moz-animation-delay: 1.1s;
-  -o-animation-delay: 1.1s;
-  -ms-animation-delay: 1.1s;
-  animation-delay: 1.1s;
-}
-@-moz-keyframes pulsate {
-  0% {
-    -webkit-transform: scale(0.1, 0.1);
-    -moz-transform: scale(0.1, 0.1);
-    -o-transform: scale(0.1, 0.1);
-    -ms-transform: scale(0.1, 0.1);
-    transform: scale(0.1, 0.1);
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-  }
-  50% {
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-  }
-  100% {
-    -webkit-transform: scale(1.2, 1.2);
-    -moz-transform: scale(1.2, 1.2);
-    -o-transform: scale(1.2, 1.2);
-    -ms-transform: scale(1.2, 1.2);
-    transform: scale(1.2, 1.2);
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-  }
-}
-@-webkit-keyframes pulsate {
-  0% {
-    -webkit-transform: scale(0.1, 0.1);
-    -moz-transform: scale(0.1, 0.1);
-    -o-transform: scale(0.1, 0.1);
-    -ms-transform: scale(0.1, 0.1);
-    transform: scale(0.1, 0.1);
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-  }
-  50% {
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-  }
-  100% {
-    -webkit-transform: scale(1.2, 1.2);
-    -moz-transform: scale(1.2, 1.2);
-    -o-transform: scale(1.2, 1.2);
-    -ms-transform: scale(1.2, 1.2);
-    transform: scale(1.2, 1.2);
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-  }
-}
-@-o-keyframes pulsate {
-  0% {
-    -webkit-transform: scale(0.1, 0.1);
-    -moz-transform: scale(0.1, 0.1);
-    -o-transform: scale(0.1, 0.1);
-    -ms-transform: scale(0.1, 0.1);
-    transform: scale(0.1, 0.1);
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-  }
-  50% {
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-  }
-  100% {
-    -webkit-transform: scale(1.2, 1.2);
-    -moz-transform: scale(1.2, 1.2);
-    -o-transform: scale(1.2, 1.2);
-    -ms-transform: scale(1.2, 1.2);
-    transform: scale(1.2, 1.2);
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-  }
-}
-@keyframes pulsate {
-  0% {
-    -webkit-transform: scale(0.1, 0.1);
-    -moz-transform: scale(0.1, 0.1);
-    -o-transform: scale(0.1, 0.1);
-    -ms-transform: scale(0.1, 0.1);
-    transform: scale(0.1, 0.1);
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-  }
-  50% {
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-  }
-  100% {
-    -webkit-transform: scale(1.2, 1.2);
-    -moz-transform: scale(1.2, 1.2);
-    -o-transform: scale(1.2, 1.2);
-    -ms-transform: scale(1.2, 1.2);
-    transform: scale(1.2, 1.2);
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-  }
-}
-@-moz-keyframes bounce {
-  0% {
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-    -webkit-transform: translateY(-2000px) rotate(-45deg);
-    -moz-transform: translateY(-2000px) rotate(-45deg);
-    -o-transform: translateY(-2000px) rotate(-45deg);
-    -ms-transform: translateY(-2000px) rotate(-45deg);
-    transform: translateY(-2000px) rotate(-45deg);
-  }
-  60% {
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-    -webkit-transform: translateY(30px) rotate(-45deg);
-    -moz-transform: translateY(30px) rotate(-45deg);
-    -o-transform: translateY(30px) rotate(-45deg);
-    -ms-transform: translateY(30px) rotate(-45deg);
-    transform: translateY(30px) rotate(-45deg);
-  }
-  80% {
-    -webkit-transform: translateY(-10px) rotate(-45deg);
-    -moz-transform: translateY(-10px) rotate(-45deg);
-    -o-transform: translateY(-10px) rotate(-45deg);
-    -ms-transform: translateY(-10px) rotate(-45deg);
-    transform: translateY(-10px) rotate(-45deg);
-  }
-  100% {
-    -webkit-transform: translateY(0) rotate(-45deg);
-    -moz-transform: translateY(0) rotate(-45deg);
-    -o-transform: translateY(0) rotate(-45deg);
-    -ms-transform: translateY(0) rotate(-45deg);
-    transform: translateY(0) rotate(-45deg);
-  }
-}
-@-webkit-keyframes bounce {
-  0% {
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-    -webkit-transform: translateY(-2000px) rotate(-45deg);
-    -moz-transform: translateY(-2000px) rotate(-45deg);
-    -o-transform: translateY(-2000px) rotate(-45deg);
-    -ms-transform: translateY(-2000px) rotate(-45deg);
-    transform: translateY(-2000px) rotate(-45deg);
-  }
-  60% {
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-    -webkit-transform: translateY(30px) rotate(-45deg);
-    -moz-transform: translateY(30px) rotate(-45deg);
-    -o-transform: translateY(30px) rotate(-45deg);
-    -ms-transform: translateY(30px) rotate(-45deg);
-    transform: translateY(30px) rotate(-45deg);
-  }
-  80% {
-    -webkit-transform: translateY(-10px) rotate(-45deg);
-    -moz-transform: translateY(-10px) rotate(-45deg);
-    -o-transform: translateY(-10px) rotate(-45deg);
-    -ms-transform: translateY(-10px) rotate(-45deg);
-    transform: translateY(-10px) rotate(-45deg);
-  }
-  100% {
-    -webkit-transform: translateY(0) rotate(-45deg);
-    -moz-transform: translateY(0) rotate(-45deg);
-    -o-transform: translateY(0) rotate(-45deg);
-    -ms-transform: translateY(0) rotate(-45deg);
-    transform: translateY(0) rotate(-45deg);
-  }
-}
-@-o-keyframes bounce {
-  0% {
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-    -webkit-transform: translateY(-2000px) rotate(-45deg);
-    -moz-transform: translateY(-2000px) rotate(-45deg);
-    -o-transform: translateY(-2000px) rotate(-45deg);
-    -ms-transform: translateY(-2000px) rotate(-45deg);
-    transform: translateY(-2000px) rotate(-45deg);
-  }
-  60% {
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-    -webkit-transform: translateY(30px) rotate(-45deg);
-    -moz-transform: translateY(30px) rotate(-45deg);
-    -o-transform: translateY(30px) rotate(-45deg);
-    -ms-transform: translateY(30px) rotate(-45deg);
-    transform: translateY(30px) rotate(-45deg);
-  }
-  80% {
-    -webkit-transform: translateY(-10px) rotate(-45deg);
-    -moz-transform: translateY(-10px) rotate(-45deg);
-    -o-transform: translateY(-10px) rotate(-45deg);
-    -ms-transform: translateY(-10px) rotate(-45deg);
-    transform: translateY(-10px) rotate(-45deg);
-  }
-  100% {
-    -webkit-transform: translateY(0) rotate(-45deg);
-    -moz-transform: translateY(0) rotate(-45deg);
-    -o-transform: translateY(0) rotate(-45deg);
-    -ms-transform: translateY(0) rotate(-45deg);
-    transform: translateY(0) rotate(-45deg);
-  }
-}
-@keyframes bounce {
-  0% {
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-    -webkit-transform: translateY(-2000px) rotate(-45deg);
-    -moz-transform: translateY(-2000px) rotate(-45deg);
-    -o-transform: translateY(-2000px) rotate(-45deg);
-    -ms-transform: translateY(-2000px) rotate(-45deg);
-    transform: translateY(-2000px) rotate(-45deg);
-  }
-  60% {
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-    -webkit-transform: translateY(30px) rotate(-45deg);
-    -moz-transform: translateY(30px) rotate(-45deg);
-    -o-transform: translateY(30px) rotate(-45deg);
-    -ms-transform: translateY(30px) rotate(-45deg);
-    transform: translateY(30px) rotate(-45deg);
-  }
-  80% {
-    -webkit-transform: translateY(-10px) rotate(-45deg);
-    -moz-transform: translateY(-10px) rotate(-45deg);
-    -o-transform: translateY(-10px) rotate(-45deg);
-    -ms-transform: translateY(-10px) rotate(-45deg);
-    transform: translateY(-10px) rotate(-45deg);
-  }
-  100% {
-    -webkit-transform: translateY(0) rotate(-45deg);
-    -moz-transform: translateY(0) rotate(-45deg);
-    -o-transform: translateY(0) rotate(-45deg);
-    -ms-transform: translateY(0) rotate(-45deg);
-    transform: translateY(0) rotate(-45deg);
-  }
-}
-
-    </style>
-
-    
-    <span class='pin'></span>
-<span class='pulse'></span>
-     
-</div>
-
 <div class="mdl-grid">
 	<div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone" 
-	  ng-repeat="item in places | filter:search | orderBy:'name' | limitTo:16">
+	  ng-repeat="item in places | filter:search">
 	  <div class="demo-card-wide mdl-card mdl-shadow--2dp">
 	    <div class="mdl-card__title">
 	      <!-- this title is left blank for image -->
@@ -654,9 +290,7 @@ body {
 	var myApp = angular.module('myApp', []);
 
 	myApp.controller('MyController', function($scope, $http){
-		$scope.showLoader = true;
-		$http.get('../public/js/places.json').success(function(data){
-			$scope.showLoader = false;
+		$http.get('js/places.json').success(function(data){
 			$scope.places = data;
 		});
 	});
@@ -669,90 +303,326 @@ body {
 	  <!-- Our categories tab -->
 	  <div class="mdl-tabs__panel" id="our-categories">
 	    <div class="mdl-grid">
-			
-	    <!-- test -->
-	    	<!-- Three Line List with secondary info and action -->
+			<!-- Wide card with share menu button -->
+<style>
 
-<ul class="demo-list-three mdl-list mdl-cell mdl-cell--12-col">
-  <li class="mdl-list__item mdl-list__item--three-line">
-    <span class="mdl-list__item-primary-content">
-      <i class="material-icons mdl-list__item-avatar">person</i>
-      <a href="#" class="">Get Together</a>
-      <span class="mdl-list__item-text-body">
-        Our top 10 places for get together in Delhi Our top 10 places for get together in Delhi 
-        Our top 10 places for get together in DelhiOur top 10 places for get together in Delhi
-        Our top 10 places for get together in DelhiOur top 10 places for get together in Delhi...
-      </span>
-    </span>
-  </li><hr>
-  <li class="mdl-list__item mdl-list__item--three-line">
-    <span class="mdl-list__item-primary-content">
-      <i class="material-icons mdl-list__item-avatar">person</i>
-      <a href="#" class="">Get Together</a>
-      <span class="mdl-list__item-text-body">
-        Our top 10 places for get together in Delhi...
-      </span>
-    </span>
-    
-  </li><hr><li class="mdl-list__item mdl-list__item--three-line">
-    <span class="mdl-list__item-primary-content">
-      <i class="material-icons mdl-list__item-avatar">person</i>
-      <a href="#" class="">Get Together</a>
-      <span class="mdl-list__item-text-body">
-        Our top 10 places for get together in Delhi...
-      </span>
-    </span>
-    
-  </li><hr><li class="mdl-list__item mdl-list__item--three-line">
-    <span class="mdl-list__item-primary-content">
-      <i class="material-icons mdl-list__item-avatar">person</i>
-      <a href="#" class="">Get Together</a>
-      <span class="mdl-list__item-text-body">
-        Our top 10 places for get together in Delhi...
-      </span>
-    </span>
-    
-  </li><hr><li class="mdl-list__item mdl-list__item--three-line">
-    <span class="mdl-list__item-primary-content">
-      <i class="material-icons mdl-list__item-avatar">person</i>
-      <a href="#" class="">Get Together</a>
-      <span class="mdl-list__item-text-body">
-        Our top 10 places for get together in Delhi...
-      </span>
-    </span>
-    
-  </li><hr><li class="mdl-list__item mdl-list__item--three-line">
-    <span class="mdl-list__item-primary-content">
-      <i class="material-icons mdl-list__item-avatar">person</i>
-      <a href="#" class="">Get Together</a>
-      <span class="mdl-list__item-text-body">
-        Our top 10 places for get together in Delhi...
-      </span>
-    </span>
-    
-  </li><hr><li class="mdl-list__item mdl-list__item--three-line">
-    <span class="mdl-list__item-primary-content">
-      <i class="material-icons mdl-list__item-avatar">person</i>
-      <a href="#" class="">Get Together</a>
-      <span class="mdl-list__item-text-body">
-        Our top 10 places for get together in Delhi...
-      </span>
-    </span>
-    
-  </li><hr><li class="mdl-list__item mdl-list__item--three-line">
-    <span class="mdl-list__item-primary-content">
-      <i class="material-icons mdl-list__item-avatar">person</i>
-      <a href="#" class="">Get Together</a>
-      <span class="mdl-list__item-text-body">
-        Our top 10 places for get together in Delhi...
-      </span>
-    </span>
-    
-  </li><hr>
-</ul>
-	    <!-- end test -->
+.demo-card-wide{
+  width: 100%;
+  margin: 20px auto;
+}
 
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 150px;
+  background: url('<br />
+<b>Notice</b>:  Undefined variable: row in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>12</b><br />
+') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+</style>
 
+<div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+  <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+      <!-- this title is left black for image -->
+    </div>
+    <div class="mdl-card__supporting-text">
+      <h4><br />
+<b>Notice</b>:  Undefined variable: name in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>25</b><br />
+</h4>
+      <br />
+<b>Notice</b>:  Undefined variable: location in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>26</b><br />
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+        View
+      </a>
+    </div>
+    
+  </div>
+</div>
+<!-- Wide card with share menu button -->
+<style>
+
+.demo-card-wide{
+  width: 100%;
+  margin: 20px auto;
+}
+
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 150px;
+  background: url('<br />
+<b>Notice</b>:  Undefined variable: row in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>12</b><br />
+') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+</style>
+
+<div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+  <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+      <!-- this title is left black for image -->
+    </div>
+    <div class="mdl-card__supporting-text">
+      <h4><br />
+<b>Notice</b>:  Undefined variable: name in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>25</b><br />
+</h4>
+      <br />
+<b>Notice</b>:  Undefined variable: location in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>26</b><br />
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+        View
+      </a>
+    </div>
+    
+  </div>
+</div>
+<!-- Wide card with share menu button -->
+<style>
+
+.demo-card-wide{
+  width: 100%;
+  margin: 20px auto;
+}
+
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 150px;
+  background: url('<br />
+<b>Notice</b>:  Undefined variable: row in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>12</b><br />
+') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+</style>
+
+<div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+  <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+      <!-- this title is left black for image -->
+    </div>
+    <div class="mdl-card__supporting-text">
+      <h4><br />
+<b>Notice</b>:  Undefined variable: name in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>25</b><br />
+</h4>
+      <br />
+<b>Notice</b>:  Undefined variable: location in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>26</b><br />
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+        View
+      </a>
+    </div>
+    
+  </div>
+</div>
+<!-- Wide card with share menu button -->
+<style>
+
+.demo-card-wide{
+  width: 100%;
+  margin: 20px auto;
+}
+
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 150px;
+  background: url('<br />
+<b>Notice</b>:  Undefined variable: row in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>12</b><br />
+') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+</style>
+
+<div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+  <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+      <!-- this title is left black for image -->
+    </div>
+    <div class="mdl-card__supporting-text">
+      <h4><br />
+<b>Notice</b>:  Undefined variable: name in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>25</b><br />
+</h4>
+      <br />
+<b>Notice</b>:  Undefined variable: location in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>26</b><br />
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+        View
+      </a>
+    </div>
+    
+  </div>
+</div>
+<!-- Wide card with share menu button -->
+<style>
+
+.demo-card-wide{
+  width: 100%;
+  margin: 20px auto;
+}
+
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 150px;
+  background: url('<br />
+<b>Notice</b>:  Undefined variable: row in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>12</b><br />
+') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+</style>
+
+<div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+  <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+      <!-- this title is left black for image -->
+    </div>
+    <div class="mdl-card__supporting-text">
+      <h4><br />
+<b>Notice</b>:  Undefined variable: name in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>25</b><br />
+</h4>
+      <br />
+<b>Notice</b>:  Undefined variable: location in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>26</b><br />
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+        View
+      </a>
+    </div>
+    
+  </div>
+</div>
+<!-- Wide card with share menu button -->
+<style>
+
+.demo-card-wide{
+  width: 100%;
+  margin: 20px auto;
+}
+
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 150px;
+  background: url('<br />
+<b>Notice</b>:  Undefined variable: row in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>12</b><br />
+') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+</style>
+
+<div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+  <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+      <!-- this title is left black for image -->
+    </div>
+    <div class="mdl-card__supporting-text">
+      <h4><br />
+<b>Notice</b>:  Undefined variable: name in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>25</b><br />
+</h4>
+      <br />
+<b>Notice</b>:  Undefined variable: location in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>26</b><br />
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+        View
+      </a>
+    </div>
+    
+  </div>
+</div>
+<!-- Wide card with share menu button -->
+<style>
+
+.demo-card-wide{
+  width: 100%;
+  margin: 20px auto;
+}
+
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 150px;
+  background: url('<br />
+<b>Notice</b>:  Undefined variable: row in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>12</b><br />
+') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+</style>
+
+<div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+  <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+      <!-- this title is left black for image -->
+    </div>
+    <div class="mdl-card__supporting-text">
+      <h4><br />
+<b>Notice</b>:  Undefined variable: name in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>25</b><br />
+</h4>
+      <br />
+<b>Notice</b>:  Undefined variable: location in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>26</b><br />
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+        View
+      </a>
+    </div>
+    
+  </div>
+</div>
+<!-- Wide card with share menu button -->
+<style>
+
+.demo-card-wide{
+  width: 100%;
+  margin: 20px auto;
+}
+
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 150px;
+  background: url('<br />
+<b>Notice</b>:  Undefined variable: row in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>12</b><br />
+') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+</style>
+
+<div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+  <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+      <!-- this title is left black for image -->
+    </div>
+    <div class="mdl-card__supporting-text">
+      <h4><br />
+<b>Notice</b>:  Undefined variable: name in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>25</b><br />
+</h4>
+      <br />
+<b>Notice</b>:  Undefined variable: location in <b>C:\xampp\htdocs\_postibuff\includes\files\cards.php</b> on line <b>26</b><br />
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+        View
+      </a>
+    </div>
+    
+  </div>
+</div>
 		</div>
 	  </div> 
 	  <!-- end our categories tab -->
@@ -765,3 +635,9 @@ body {
 
 </body>
 </html>
+
+<!-- 
+
+1) Ten haunted places in delhi
+
+ -->
