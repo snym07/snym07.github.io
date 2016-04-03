@@ -8,11 +8,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- to change color of notification bar -->
 		<!-- Chrome, Firefox OS and Opera -->
-	<meta name="theme-color" content="#009688">
+	<meta name="theme-color" content="#283593">
 	<!-- Windows Phone -->
-	<meta name="msapplication-navbutton-color" content="#009688">
+	<meta name="msapplication-navbutton-color" content="#283593">
 	<!-- iOS Safari -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="#009688">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#283593">
 
 
 <!-- CSS links -->
@@ -41,6 +41,16 @@
 		</div>
 
 		<div class="grid">
+
+			<!-- loader -->
+			<div class="loader" ng-show="loader">
+				<div class="cssload-loader">
+					<div class="cssload-inner cssload-one"></div>
+					<div class="cssload-inner cssload-two"></div>
+					<div class="cssload-inner cssload-three"></div>
+				</div>
+			</div>
+
 			<div class="container cell cell--3-col-desktop cell--4-col-tablet cell--4-col-phone shadow-2dp" 
 			dir-paginate="nobel in nobels | orderBy : 'firstname' | filter: search | itemsPerPage:8">
 
@@ -110,9 +120,11 @@
 			$scope.indigo = "#3F51B5";
 			$scope.indigoLight = "#E8EAF6";
 
+			$scope.loader= true;
 
 			$http.get('js/nobel.json').success(function(data){
 				$scope.nobels = data;
+				$scope.loader = false;
 				// if($scope.nobels.prizes[0].category == "physics"){
 				// 	$scope.mycolor = "#3F51B5";
 				// }
