@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>Nobel Prize Winners</title>
+
+	<!-- meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- to change color of notification bar -->
+		<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#009688">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#009688">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#009688">
+
+
+<!-- CSS links -->
+  	<link rel="stylesheet" type="text/css" href="css/grid.css">
+  	<link rel="stylesheet" type="text/css" href="css/style.css">
+  	<link rel="stylesheet" type="text/css" href="css/custom.css">
+
+<!-- Scripts -->
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/dirPagination.js"></script>
+
+<!-- roboto font -->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+
+	
+</head>
+<body ng-controller="MyController">
+
+<!-- test div -->
+	<div>
+
+		<div class="grid">
+			<div class="cell cell--12-col">
+				<input type="search" ng-model="search">
+			</div>
+		</div>
+
+		<div class="grid">
+			<div class="container cell cell--3-col-desktop cell--4-col-tablet cell--4-col-phone shadow-2dp" 
+			dir-paginate="nobel in nobels | orderBy : 'firstname' | filter: search | itemsPerPage:8">
+
+				<div class="layer-one">
+					<!-- svg -->
+					<svg class="icon" viewBox="0 0 24 24">
+					    <path fill="{{indigo}}" d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z" />
+					</svg>
+					<div class="name">
+						<h4>{{nobel.firstname | limitTo: 15}}</h4>
+						<p>{{nobel.born | limitTo:4}} - {{ nobel.died | limitTo:4}}</p>
+					</div>
+					
+				</div>
+
+				<div class="layer-two">
+					<h6>Category : {{nobel.prizes[0].category}}</h6>
+					<h5>{{nobel.prizes[0].year}}</h5>
+				</div>
+
+				<div class="layer-three" style="background-color:{{indigoLight}}">
+					<h6>Male</h6>
+					<div ng-click="moreInfo = !moreInfo">
+						
+						<p ng-show="moreInfo">Less info</p>
+						<svg ng-show="moreInfo" style="width:24px;height:24px" viewBox="0 0 24 24">
+						    <path fill="#757575" d="M12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22M17,14L12,9L7,14H17Z" />
+						</svg>
+
+						<p ng-hide="moreInfo">More info</p>
+						<svg ng-hide="moreInfo" style="width:24px;height:24px" viewBox="0 0 24 24">
+						    <path fill="#757575" d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M7,10L12,15L17,10H7Z" />
+						</svg>
+
+					</div>
+
+					<!-- hidden info -->
+					<div class="more-info" ng-show="moreInfo">
+						<h6>Full name : {{nobel.firstname + ' ' + nobel.surname}}</h6>
+						<p>Got nobel prize {{nobel.prizes[0].motivation}}</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- pagination -->
+		<div class="grid">
+			<div class="my-pagination cell cell--12-col-desktop cell--8-col-tablet cell--4-col-phone">
+				<dir-pagination-controls
+			       max-size="5"
+			       direction-links="true"
+			       boundary-links="true" >
+			    </dir-pagination-controls>
+			</div>
+		</div>
+		
+
+	</div>
+
+
+	<script type="text/javascript">
+
+		var myApp = angular.module('myApp', ['angularUtils.directives.dirPagination']);
+
+		myApp.controller('MyController', function($scope, $http){
+			$scope.indigo = "#3F51B5";
+			$scope.indigoLight = "#E8EAF6";
+
+
+			$http.get('js/nobel.json').success(function(data){
+				$scope.nobels = data;
+				// if($scope.nobels.prizes[0].category == "physics"){
+				// 	$scope.mycolor = "#3F51B5";
+				// }
+			});
+		});
+
+	</script>
+
+</body>
+</html>
