@@ -1,0 +1,26 @@
+.demo-layout-transparent {
+  background: url('darkWebImages/main.jpg') center / cover;
+}
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: white;
+}
+
+.heading{
+	margin:30px auto;
+	color: white;
+	text-align: center;
+}
+
+.my-img{
+	
+	margin: 10px auto;
+}
+
+.my-card{
+	margin: 20px auto;
+	width:80%;
+}
+
