@@ -18,43 +18,106 @@
 	<link rel="shortcut icon" href="">
 
 <!-- CSS links -->
-  	<link rel="stylesheet" type="text/css" href="css/grid.css">
-  	<link rel="stylesheet" type="text/css" href="css/style.css">
+  	<link rel="stylesheet" type="text/css" href="css/material.min.css">
   	<link rel="stylesheet" type="text/css" href="css/custom.css">
 	
 <!-- Scripts -->
-  	<script type="text/javascript" src="js/snowstorm-min.js"></script>
-  	<script type="text/javascript">
-  		snowStorm.excludeMobile = false;
-  	</script>
+  	<script type="text/javascript" src="js/material.min.js"></script>
 
 <!-- roboto font -->
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+	<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css"> -->
 
 </head>
 <body>
 
 
-  	<!-- space -->
-  	<div style="margin:100px"></div>
+  	<!-- Heading -->
+  	<div class="mdl-grid">
+  		<!-- photo -->
+  		<div class="photo mdl-cell mdl-cell--12-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+  			<img src="images/me.jpg" class="my-photo">
+  		</div>
+  	</div>
 
-  	<div class="grid">
-		<div class="postibuff cell cell--3-col-desktop cell--3-col-tablet cell--3-col-phone shadow-4dp" style="background-color:#2196F3">
-			<a href="postibuff_test">Postibuff Test</a>
-		</div>
-	</div>
+  	<div class="mdl-grid">
+  		<!-- info -->
+  		<div class="name mdl-cell mdl-cell--12-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+  			<img class="info" src="images/name.png">
+  			<p class="mdl-typography--text-center">github repo : <a href="https://github.com/snym07">https://github.com/snym07</a></p>
+  		</div>
+  	</div>
 
-	<div class="grid">
-		<div class="postibuff mdl-color--orange-500 cell cell--3-col-desktop cell--3-col-tablet cell--3-col-phone shadow-4dp" style="background-color:#1E88E5">
-			<a href="nobel_prize">Nobel Prize Winners</a>
-		</div>
-	</div>
+  	<!-- Projects -->
+  	<div>
+  		<!-- row 1 -->
+  		<div class="mdl-grid" style="width:90%">
+  			<div class="my-card mdl-cell mdl-shadow--2dp mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+  				<img src="images/desk.jpg" style="width:100%">
+  				<div class="mdl-card__title">
+				    <h2 class="mdl-card__title-text">Nobel Prize</h2>
+				  </div>
+  				<div class="mdl-card__supporting-text">
+			    List of Nobel Prize winners using material design and AngularJS framework.
+			  </div>
+			  <div class="mdl-card__actions mdl-card--border">
+			    <a href="article/" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+			      Show More
+			    </a>
+			  </div>
+  			</div>
 
-	<div class="grid">
-		<div class="postibuff mdl-color--red-500 cell cell--3-col-desktop cell--3-col-tablet cell--3-col-phone shadow-4dp" style="background-color:#1976D2">
-			<a href="article">Article about Dark Web</a>
-		</div>
-	</div>
+  			<div class="my-card mdl-cell mdl-shadow--2dp mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+  				<img src="images/desk.jpg" style="width:100%">
+  				<div class="mdl-card__title">
+				    <h2 class="mdl-card__title-text">Article</h2>
+				  </div>
+  				<div class="mdl-card__supporting-text">
+			    Top 15 facts about the Dark web a part of the Deep Web with Material Design implementation.
+			  </div>
+			  <div class="mdl-card__actions mdl-card--border">
+			    <a href="article/" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+			      Show More
+			    </a>
+			  </div>
+  			</div>
+
+  			<div class="my-card mdl-cell mdl-shadow--2dp mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+  				<img src="images/desk.jpg" style="width:100%">
+  				<div class="mdl-card__title">
+				    <h2 class="mdl-card__title-text">Blog</h2>
+				  </div>
+  				<div class="mdl-card__supporting-text">
+			    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			    Mauris sagittis pellentesque lacus eleifend lacinia...
+			  </div>
+			  <div class="mdl-card__actions mdl-card--border">
+			    <a href="#" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+			      Show More
+			    </a>
+			  </div>
+  			</div>
+
+  			<div class="my-card mdl-cell mdl-shadow--2dp mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+  				<img src="images/desk.jpg" style="width:100%">
+  				<div class="mdl-card__title">
+				    <h2 class="mdl-card__title-text">Blog</h2>
+				  </div>
+  				<div class="mdl-card__supporting-text">
+			    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			    Mauris sagittis pellentesque lacus eleifend lacinia...
+			  </div>
+			  <div class="mdl-card__actions mdl-card--border">
+			    <a href="#" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+			      Show More
+			    </a>
+			  </div>
+  			</div>
+
+  		</div>
+
+  		<!-- row 2 -->
+  		<div></div>
+  	</div>
 
 
 </body>

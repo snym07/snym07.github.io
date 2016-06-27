@@ -1,36 +1,41 @@
 body{
-	background-color: #607D8B;
-}
-
-.background-img {
-  background: url('../images/cat.svg') center / cover;
-  
+	background: url('../images/blur_bg_min.jpg') center/cover;
+	background-attachment: fixed;
 }
 
 
-/* postibuff */
+/* ::::: Heading ::::: */
 
-
-.postibuff{
-	width: 100%;
-	height: 100px;
-	border-radius: 3px;
-	margin: 20px auto 0;
-	cursor: pointer;
+/* __ photo __ */
+.photo{
+	margin: 10px auto 0;
 }
 
-.postibuff a{
-	text-decoration: none;
-	color: #FAFAFA;
-	font-size: 1.5em;
+.my-photo{
 	display: block;
-	margin: 20px auto;
-	text-align: center;
-	padding: 10px;
+	margin:  auto;
+	background: center/cover;
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
 }
 
-.postibuff a:hover{
-	color: #FAFAFA;
-	text-decoration: none;
+/* __ info __ */
+.name{
+	margin: 0px auto;
 }
 
+.info{
+	display: block;
+	width: 200px;
+	margin: 0 auto;
+}
+
+/* ::::: projects ::::: */
+.my-card{
+	background-color: white;
+	margin: 10px auto;
+
+}
+
+/* __ rows __ */
