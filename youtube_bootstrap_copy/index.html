@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- title -->
+	<title>Bootstrap practice</title>
+
+	<!-- meta tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- stylesheets -->
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.md.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/shadows.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+
+</head>
+<body>
+
+<!-- navigation bar -->
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">
+	      	YouTube
+	      </a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	     
+	      <form class="navbar-form navbar-left" role="search">
+	        <div class="form-group">
+	          <input type="text" class="form-control" placeholder="Search">
+	        </div>
+	        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+	      </form>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><button class="btn btn-default navbar-btn">Upload</button></li>
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="#">Log in</a></li>
+	            <li><a href="#">Sign up</a></li>
+	            <!-- <li><a href="#">Something else here</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="#">Separated link</a></li> -->
+	          </ul>
+	        </li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+
+	<!-- side menu -->
+	<div class="container-fluid">
+		<div class="row">
+			
+			<!-- side nav bar -->
+			<div class="col-md-3 col-sm-3 hidden-xs">
+				<ul class="nav nav-pills nav-stacked">
+				  <li role="presentation" class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> &nbsp;Home</a></li>
+				  <li role="presentation"><a href="#">Profile</a></li>
+				  <li role="presentation"><a href="#">Messages</a></li>
+				</ul>
+			</div>
+
+			<!-- tabs -->
+			<div class="col-md-8 col-sm-8">
+
+			  <!-- Nav tabs -->
+			  <ul class="nav nav-tabs" role="tablist">
+			    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+			    <li role="presentation"><a href="#trending" aria-controls="trending" role="tab" data-toggle="tab">Trending</a></li>
+			    <li role="presentation"><a href="#subscription" aria-controls="subscription" role="tab" data-toggle="tab">Subscription</a></li>
+			  </ul>
+
+			  <!-- Tab panes -->
+			  <div class="tab-content">
+
+			  <!-- Home -->
+			    <div role="tabpanel" class="tab-pane active" id="home">
+			    	<div class="col-xs-12 category">
+			    		<h4>Recommended</h4>
+			    		
+			    		<div class="row">
+			    			<a href="#">
+					    		<div class="videos col-xs-12 col-sm-6 col-md-3 col-lg-3 thumbnail">
+					    			<img src="images/1.jpg">
+					    			<div class="caption">
+					    				<h4>Five people who have used infinty ...</h4>
+					    				<p>TheMarvelExpert<br>2345678 views</p>
+					    				
+					    			</div>
+					    		</div>
+							</a>
+							<a href="#">
+					    		<div class="videos col-xs-12 col-sm-6 col-md-3 col-lg-3 thumbnail">
+					    			<img src="images/2.jpg">
+					    			<div class="caption">
+					    				<h4>Five people who have used infinty ...</h4>
+					    				<p>TheMarvelExpert<br>2345678 views</p>
+					    				
+					    			</div>
+					    		</div>
+							</a>
+							<a href="#">
+					    		<div class="videos col-xs-12 col-sm-6 col-md-3 col-lg-3 thumbnail">
+					    			<img src="images/3.jpg">
+					    			<div class="caption">
+					    				<h4>Five people who have used infinty ...</h4>
+					    				<p>TheMarvelExpert<br>2345678 views</p>
+					    				
+					    			</div>
+					    		</div>
+							</a>
+							<a href="#">
+					    		<div class="videos col-xs-12 col-sm-6 col-md-3 col-lg-3 thumbnail">
+					    			<img src="images/9.jpg">
+					    			<div class="caption">
+					    				<h4>Five people who have used infinty ...</h4>
+					    				<p>TheMarvelExpert<br>2345678 views</p>
+					    				
+					    			</div>
+					    		</div>
+							</a>
+			    		</div>
+
+						<div class="row">
+							<a href="#">
+					    		<div class="videos col-xs-12 col-sm-6 col-md-3 col-lg-3 thumbnail">
+					    			<img src="images/5.jpg">
+					    			<div class="caption">
+					    				<h4>Five people who have used infinty ...</h4>
+					    				<p>TheMarvelExpert<br>2345678 views</p>
+					    				
+					    			</div>
+					    		</div>
+							</a>
+							<a href="#">
+					    		<div class="videos col-xs-12 col-sm-6 col-md-3 col-lg-3 thumbnail">
+					    			<img src="images/6.jpg">
+					    			<div class="caption">
+					    				<h4>Five people who have used infinty ...</h4>
+					    				<p>TheMarvelExpert<br>2345678 views</p>
+					    				
+					    			</div>
+					    		</div>
+							</a>
+							<a href="#">
+					    		<div class="videos col-xs-12 col-sm-6 col-md-3 col-lg-3 thumbnail">
+					    			<img src="images/7.jpg">
+					    			<div class="caption">
+					    				<h4>Five people who have used infinty ...</h4>
+					    				<p>TheMarvelExpert<br>2345678 views</p>
+					    				
+					    			</div>
+					    		</div>
+							</a>
+							<a href="#">
+					    		<div class="videos col-xs-12 col-sm-6 col-md-3 col-lg-3 thumbnail">
+					    			<img src="images/8.jpg">
+					    			<div class="caption">
+					    				<h4>Five people who have used infinty ...</h4>
+					    				<p>TheMarvelExpert<br>2345678 views</p>
+					    				
+					    			</div>
+					    		</div>
+							</a>
+							<!-- <a href="#" class="visible-md">
+					    		<div class="videos col-xs-12 col-sm-6 col-md-3 col-lg-3 thumbnail">
+					    			<img src="images/9.jpg">
+					    			<div class="caption">
+					    				<h4>Five people who have used infinty ...</h4>
+					    				<p>TheMarvelExpert<br>2345678 views</p>
+					    				
+					    			</div>
+					    		</div>
+							</a> -->
+						</div>
+
+			    	</div>
+
+			    	<!-- comics -->
+			    	<div class="col-xs-12 category">
+			    		<h4>Comics</h4>
+			    		<a href="#">
+				    		<div class="videos col-xs-12 col-sm-6 col-md-4 col-lg-3 thumbnail">
+				    			<img src="images/10711.jpg">
+				    			<div class="caption">
+				    				<h4>Five people who have used infinty ...</h4>
+				    				<p>TheMarvelExpert<br>2345678 views</p>
+				    				
+				    			</div>
+				    		</div>
+						</a>
+						<a href="#">
+				    		<div class="videos col-xs-12 col-sm-6 col-md-4 col-lg-3 thumbnail">
+				    			<img src="images/10711.jpg">
+				    			<div class="caption">
+				    				<h4>Five people who have used infinty ...</h4>
+				    				<p>TheMarvelExpert<br>2345678 views</p>
+				    				
+				    			</div>
+				    		</div>
+						</a>
+						<a href="#">
+				    		<div class="videos col-xs-12 col-sm-6 col-md-4 col-lg-3 thumbnail">
+				    			<img src="images/10711.jpg">
+				    			<div class="caption">
+				    				<h4>Five people who have used infinty ...</h4>
+				    				<p>TheMarvelExpert<br>2345678 views</p>
+				    				
+				    			</div>
+				    		</div>
+						</a>
+						<a href="#">
+				    		<div class="videos col-xs-12 col-sm-6 col-md-4 col-lg-3 thumbnail">
+				    			<img src="images/10711.jpg">
+				    			<div class="caption">
+				    				<h4>Five people who have used infinty ...</h4>
+				    				<p>TheMarvelExpert<br>2345678 views</p>
+				    				
+				    			</div>
+				    		</div>
+						</a>
+						<a href="#">
+				    		<div class="videos col-xs-12 col-sm-6 col-md-4 col-lg-3 thumbnail">
+				    			<img src="images/10711.jpg">
+				    			<div class="caption">
+				    				<h4>Five people who have used infinty ...</h4>
+				    				<p>TheMarvelExpert<br>2345678 views</p>
+				    				
+				    			</div>
+				    		</div>
+						</a>
+						<a href="#">
+				    		<div class="videos col-xs-12 col-sm-6 col-md-4 col-lg-3 thumbnail">
+				    			<img src="images/10711.jpg">
+				    			<div class="caption">
+				    				<h4>Five people who have used infinty ...</h4>
+				    				<p>TheMarvelExpert<br>2345678 views</p>
+				    				
+				    			</div>
+				    		</div>
+						</a>
+						<a href="#">
+				    		<div class="videos col-xs-12 col-sm-6 col-md-4 col-lg-3 thumbnail">
+				    			<img src="images/10711.jpg">
+				    			<div class="caption">
+				    				<h4>Five people who have used infinty ...</h4>
+				    				<p>TheMarvelExpert<br>2345678 views</p>
+				    				
+				    			</div>
+				    		</div>
+						</a>
+						<a href="#">
+				    		<div class="videos col-xs-12 col-sm-6 col-md-4 col-lg-3 thumbnail">
+				    			<img src="images/10711.jpg">
+				    			<div class="caption">
+				    				<h4>Five people who have used infinty ...</h4>
+				    				<p>TheMarvelExpert<br>2345678 views</p>
+				    				
+				    			</div>
+				    		</div>
+						</a>
+						<a href="#" class="visible-md">
+				    		<div class="videos col-xs-12 col-sm-6 col-md-4 col-lg-3 thumbnail">
+				    			<img src="images/10711.jpg">
+				    			<div class="caption">
+				    				<h4>Five people who have used infinty ...</h4>
+				    				<p>TheMarvelExpert<br>2345678 views</p>
+				    				
+				    			</div>
+				    		</div>
+						</a>
+			    	</div>
+
+			    	<!-- load more button -->
+			    	<button type="button" id="myButton" data-loading-text="Loading..." class="btn btn-default center-block" autocomplete="off">
+					  Load more
+					</button>
+
+			    </div>
+
+			   <!-- Trending -->
+				<div role="tabpanel" class="tab-pane" id="trending">b</div>
+			    
+			    <!-- Subscription -->
+			    <div role="tabpanel" class="tab-pane" id="subscription">c</div>
+
+			  </div>
+
+			<!-- footer -->
+			<div class="footer">
+				<hr>
+				<button type="button" class="btn btn-link">About</button>
+				<button type="button" class="btn btn-link">Press</button>
+				<button type="button" class="btn btn-link">Copyright</button>
+				<button type="button" class="btn btn-link">Advertise</button>
+			</div>
+
+			</div> <!-- tabs end -->
+
+
+		</div>
+	</div>
+
+	
+
+<!-- javascripts -->
+	<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

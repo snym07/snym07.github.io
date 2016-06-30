@@ -1,0 +1,15 @@
+/* category contaings tumbnails */
+.category{
+	margin: 20px auto;
+	background-color: white;
+}
+
+/* thumbnail videos */
+.videos{
+	margin: 10px auto;
+}
+
+/* footer */
+.footer{
+	margin: 20px auto;
+}
