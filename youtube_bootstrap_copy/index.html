@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<!-- title -->
-	<title>Bootstrap practice</title>
+	<title>Youtube clone</title>
 
 	<!-- meta tags -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -41,7 +41,33 @@
 	        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
 	      </form>
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><button class="btn btn-default navbar-btn">Upload</button></li>
+	        <li>
+	        	<!-- Upload Button -->
+				<button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal">
+				  Upload
+				</button>
+
+				<!-- <span class="my-icon glyphicon glyphicon-facetime-video"></span> -->
+
+				<!-- Modal -->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				  <div class="modal-dialog" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				        <h4 class="modal-title" id="myModalLabel">Upload Video</h4>
+				      </div>
+				      <div class="modal-body">
+				        You can not upload a video because this is just a clone of YouTube which is not even connected to a database of any kind. Please close this model and resize your browser to see the responsiveness Bootstrap gives us. Peace!
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				        <button type="button" class="btn btn-primary">Upload</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+	        </li>
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span></a>
 	          <ul class="dropdown-menu">
@@ -65,8 +91,16 @@
 			<div class="col-md-3 col-sm-3 hidden-xs">
 				<ul class="nav nav-pills nav-stacked">
 				  <li role="presentation" class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> &nbsp;Home</a></li>
-				  <li role="presentation"><a href="#">Profile</a></li>
-				  <li role="presentation"><a href="#">Messages</a></li>
+				  <li role="presentation"><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp; My Channel</a></li>
+				  <li role="presentation"><a href="#"><span class="glyphicon glyphicon-fire"></span>&nbsp; Trending</a></li>
+				  <li role="presentation"><a href="#"><span class="glyphicon glyphicon-list-alt"></span>&nbsp; Subscriptions</a></li>
+				  <li role="presentation"><a href="#"><span class="glyphicon glyphicon-hourglass"></span>&nbsp; History</a></li>
+				  <li role="presentation"><a href="#"><span class="glyphicon glyphicon-time"></span>&nbsp; Watch Later</a></li>
+				  <hr>
+				  <h4>Library</h4>
+				  <li role="presentation"><a href="#"><span class="glyphicon glyphicon-heart"></span>&nbsp; Favorites</a></li>
+				  <li role="presentation"><a href="#"><span class="glyphicon glyphicon-thumbs-up"></span>&nbsp; Liked Videos</a></li>
+				  <li role="presentation"><a href="#"><span class="glyphicon glyphicon-list"></span>&nbsp; My Playlist</a></li>
 				</ul>
 			</div>
 
@@ -90,41 +124,41 @@
 			    		
 			    		<div class="row">
 			    			<a href="#">
-					    		<div class="videos col-xs-12 col-sm-6 col-md-3 col-lg-3 thumbnail">
+					    		<div class="videos col-xs-12 col-sm-12 col-md-3 col-lg-3 thumbnail">
 					    			<img src="images/1.jpg">
 					    			<div class="caption">
-					    				<h4>Five people who have used infinty ...</h4>
-					    				<p>TheMarvelExpert<br>2345678 views</p>
+					    				<h4>Some random girl with goggles</h4>
+					    				<p>GoGirl<br>3254564 views</p>
 					    				
 					    			</div>
 					    		</div>
 							</a>
 							<a href="#">
-					    		<div class="videos col-xs-12 col-sm-6 col-md-3 col-lg-3 thumbnail">
+					    		<div class="videos col-xs-12 col-sm-12 col-md-3 col-lg-3 thumbnail">
 					    			<img src="images/2.jpg">
 					    			<div class="caption">
-					    				<h4>Five people who have used infinty ...</h4>
-					    				<p>TheMarvelExpert<br>2345678 views</p>
+					    				<h4>Serious cat thinking about food</h4>
+					    				<p>CatsnFood<br>2323455 views</p>
 					    				
 					    			</div>
 					    		</div>
 							</a>
 							<a href="#">
-					    		<div class="videos col-xs-12 col-sm-6 col-md-3 col-lg-3 thumbnail">
+					    		<div class="videos col-xs-12 col-sm-12 col-md-3 col-lg-3 thumbnail">
 					    			<img src="images/3.jpg">
 					    			<div class="caption">
-					    				<h4>Five people who have used infinty ...</h4>
-					    				<p>TheMarvelExpert<br>2345678 views</p>
+					    				<h4>Rubber ball chasing a dog</h4>
+					    				<p>StupidDog<br>3453452 views</p>
 					    				
 					    			</div>
 					    		</div>
 							</a>
 							<a href="#">
-					    		<div class="videos col-xs-12 col-sm-6 col-md-3 col-lg-3 thumbnail">
+					    		<div class="videos col-xs-12 col-sm-12 col-md-3 col-lg-3 thumbnail">
 					    			<img src="images/9.jpg">
 					    			<div class="caption">
-					    				<h4>Five people who have used infinty ...</h4>
-					    				<p>TheMarvelExpert<br>2345678 views</p>
+					    				<h4>Fox doing nothing for hours</h4>
+					    				<p>HowToWasteTime<br>2342352 views</p>
 					    				
 					    			</div>
 					    		</div>
@@ -133,41 +167,41 @@
 
 						<div class="row">
 							<a href="#">
-					    		<div class="videos col-xs-12 col-sm-6 col-md-3 col-lg-3 thumbnail">
+					    		<div class="videos col-xs-12 col-sm-12 col-md-3 col-lg-3 thumbnail">
 					    			<img src="images/5.jpg">
 					    			<div class="caption">
-					    				<h4>Five people who have used infinty ...</h4>
-					    				<p>TheMarvelExpert<br>2345678 views</p>
+					    				<h4>MacBook Pro worst review ever </h4>
+					    				<p>WTF<br>242341 views</p>
 					    				
 					    			</div>
 					    		</div>
 							</a>
 							<a href="#">
-					    		<div class="videos col-xs-12 col-sm-6 col-md-3 col-lg-3 thumbnail">
+					    		<div class="videos col-xs-12 col-sm-12 col-md-3 col-lg-3 thumbnail">
 					    			<img src="images/6.jpg">
 					    			<div class="caption">
-					    				<h4>Five people who have used infinty ...</h4>
-					    				<p>TheMarvelExpert<br>2345678 views</p>
+					    				<h4>No caption bcoz she is beautiful</h4>
+					    				<p>Whhhaaaat??!!<br>43534543 views</p>
 					    				
 					    			</div>
 					    		</div>
 							</a>
 							<a href="#">
-					    		<div class="videos col-xs-12 col-sm-6 col-md-3 col-lg-3 thumbnail">
+					    		<div class="videos col-xs-12 col-sm-12 col-md-3 col-lg-3 thumbnail">
 					    			<img src="images/7.jpg">
 					    			<div class="caption">
-					    				<h4>Five people who have used infinty ...</h4>
-					    				<p>TheMarvelExpert<br>2345678 views</p>
+					    				<h4>White flower coming out of a white girl</h4>
+					    				<p>Coincidence<br>2342342 views</p>
 					    				
 					    			</div>
 					    		</div>
 							</a>
 							<a href="#">
-					    		<div class="videos col-xs-12 col-sm-6 col-md-3 col-lg-3 thumbnail">
+					    		<div class="videos col-xs-12 col-sm-12 col-md-3 col-lg-3 thumbnail">
 					    			<img src="images/8.jpg">
 					    			<div class="caption">
-					    				<h4>Five people who have used infinty ...</h4>
-					    				<p>TheMarvelExpert<br>2345678 views</p>
+					    				<h4>You don't wanna know what this is</h4>
+					    				<p>MoreThanOneMeaning<br>43532232 views</p>
 					    				
 					    			</div>
 					    		</div>
@@ -188,13 +222,13 @@
 
 			    	<!-- comics -->
 			    	<div class="col-xs-12 category">
-			    		<h4>Comics</h4>
+			    		<h4>Metal Playlist</h4>
 			    		<a href="#">
 				    		<div class="videos col-xs-12 col-sm-6 col-md-4 col-lg-3 thumbnail">
 				    			<img src="images/10711.jpg">
 				    			<div class="caption">
-				    				<h4>Five people who have used infinty ...</h4>
-				    				<p>TheMarvelExpert<br>2345678 views</p>
+				    				<h4>Enter Sand man</h4>
+				    				<p>Metal Detector<br>3241233 views</p>
 				    				
 				    			</div>
 				    		</div>
@@ -203,8 +237,8 @@
 				    		<div class="videos col-xs-12 col-sm-6 col-md-4 col-lg-3 thumbnail">
 				    			<img src="images/10711.jpg">
 				    			<div class="caption">
-				    				<h4>Five people who have used infinty ...</h4>
-				    				<p>TheMarvelExpert<br>2345678 views</p>
+				    				<h4>Master of Puppets</h4>
+				    				<p>Metal Detector<br>234213 views</p>
 				    				
 				    			</div>
 				    		</div>
@@ -213,8 +247,8 @@
 				    		<div class="videos col-xs-12 col-sm-6 col-md-4 col-lg-3 thumbnail">
 				    			<img src="images/10711.jpg">
 				    			<div class="caption">
-				    				<h4>Five people who have used infinty ...</h4>
-				    				<p>TheMarvelExpert<br>2345678 views</p>
+				    				<h4>And Justice for all</h4>
+				    				<p>Metal Detector<br>5412342 views</p>
 				    				
 				    			</div>
 				    		</div>
@@ -223,8 +257,8 @@
 				    		<div class="videos col-xs-12 col-sm-6 col-md-4 col-lg-3 thumbnail">
 				    			<img src="images/10711.jpg">
 				    			<div class="caption">
-				    				<h4>Five people who have used infinty ...</h4>
-				    				<p>TheMarvelExpert<br>2345678 views</p>
+				    				<h4>Fade to Black Metalica</h4>
+				    				<p>Metal Detector<br>534523 views</p>
 				    				
 				    			</div>
 				    		</div>
@@ -233,8 +267,8 @@
 				    		<div class="videos col-xs-12 col-sm-6 col-md-4 col-lg-3 thumbnail">
 				    			<img src="images/10711.jpg">
 				    			<div class="caption">
-				    				<h4>Five people who have used infinty ...</h4>
-				    				<p>TheMarvelExpert<br>2345678 views</p>
+				    				<h4>Unforgiven</h4>
+				    				<p>Metal Detector<br>53425234 views</p>
 				    				
 				    			</div>
 				    		</div>
@@ -243,8 +277,8 @@
 				    		<div class="videos col-xs-12 col-sm-6 col-md-4 col-lg-3 thumbnail">
 				    			<img src="images/10711.jpg">
 				    			<div class="caption">
-				    				<h4>Five people who have used infinty ...</h4>
-				    				<p>TheMarvelExpert<br>2345678 views</p>
+				    				<h4>Unforgiven II</h4>
+				    				<p>Metal Detector<br>234238 views</p>
 				    				
 				    			</div>
 				    		</div>
@@ -253,8 +287,8 @@
 				    		<div class="videos col-xs-12 col-sm-6 col-md-4 col-lg-3 thumbnail">
 				    			<img src="images/10711.jpg">
 				    			<div class="caption">
-				    				<h4>Five people who have used infinty ...</h4>
-				    				<p>TheMarvelExpert<br>2345678 views</p>
+				    				<h4>Hero of the Day</h4>
+				    				<p>Metal Detector<br>423554 views</p>
 				    				
 				    			</div>
 				    		</div>
@@ -263,8 +297,8 @@
 				    		<div class="videos col-xs-12 col-sm-6 col-md-4 col-lg-3 thumbnail">
 				    			<img src="images/10711.jpg">
 				    			<div class="caption">
-				    				<h4>Five people who have used infinty ...</h4>
-				    				<p>TheMarvelExpert<br>2345678 views</p>
+				    				<h4>The Call of Ktulu</h4>
+				    				<p>Metal Detector<br>427462 views</p>
 				    				
 				    			</div>
 				    		</div>
@@ -273,8 +307,8 @@
 				    		<div class="videos col-xs-12 col-sm-6 col-md-4 col-lg-3 thumbnail">
 				    			<img src="images/10711.jpg">
 				    			<div class="caption">
-				    				<h4>Five people who have used infinty ...</h4>
-				    				<p>TheMarvelExpert<br>2345678 views</p>
+				    				<h4>Turn the page</h4>
+				    				<p>Metal Detector<br>2343678 views</p>
 				    				
 				    			</div>
 				    		</div>
@@ -289,10 +323,158 @@
 			    </div>
 
 			   <!-- Trending -->
-				<div role="tabpanel" class="tab-pane" id="trending">b</div>
+				<div role="tabpanel" class="tab-pane" id="trending">
+					<!-- trending videos -->
+					<div class="container-fluid">
+						<div class="row">
+							<div class="videos col-xs-3">
+								<img src="images/4.jpg" class="img-responsive">
+							</div>
+							<div class="col-xs-8">
+								<h3>Boxer woman punching a bag</h3>
+								<p>343356 views</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua.</p>
+							</div>
+						</div>
+						<hr>
+						<div class="row">
+							<div class="videos col-xs-3">
+								<img src="images/7.jpg" class="img-responsive">
+							</div>
+							<div class="col-xs-8">
+								<h3>Lying down on white flowers</h3>
+								<p>728744 views</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua.</p>
+							</div>
+						</div>
+						<hr>
+						<div class="row">
+							<div class="videos col-xs-3">
+								<img src="images/3.jpg" class="img-responsive">
+							</div>
+							<div class="col-xs-8">
+								<h3>A ball and a Dog</h3>
+								<p>3556543 views</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua.</p>
+							</div>
+						</div>
+						<hr>
+						<div class="row">
+							<div class="videos col-xs-3">
+								<img src="images/1.jpg" class="img-responsive">
+							</div>
+							<div class="col-xs-8">
+								<h3>Solution for confusion</h3>
+								<p>8398583 views</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua.</p>
+							</div>
+						</div>
+						<hr>
+						<div class="row">
+							<div class="videos col-xs-3">
+								<img src="images/6.jpg" class="img-responsive">
+							</div>
+							<div class="col-xs-8">
+								<h3>Don't know what to do?</h3>
+								<p>8328216 views</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua.</p>
+							</div>
+						</div>
+						<hr>
+						<div class="row">
+							<div class="videos col-xs-3">
+								<img src="images/9.jpg" class="img-responsive">
+							</div>
+							<div class="col-xs-8">
+								<h3>Somebody give this fox a sandwitch</h3>
+								<p>654264 views</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua.</p>
+							</div>
+						</div>
+						<hr>
+						<div class="row">
+							<div class="videos col-xs-3">
+								<img src="images/7.jpg" class="img-responsive">
+							</div>
+							<div class="col-xs-8">
+								<h3>What? Again?</h3>
+								<p>2564322 views</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua.</p>
+							</div>
+						</div>
+						<hr>
+						<div class="row">
+							<div class="videos col-xs-3">
+								<img src="images/5.jpg" class="img-responsive">
+							</div>
+							<div class="col-xs-8">
+								<h3>Sombody's MacBook</h3>
+								<p>346232 views</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua.</p>
+							</div>
+						</div>
+						<hr>
+					</div>
+				</div>
 			    
 			    <!-- Subscription -->
-			    <div role="tabpanel" class="tab-pane" id="subscription">c</div>
+			    <div role="tabpanel" class="tab-pane" id="subscription">
+			    	<div class="container">
+			    		<div class="row">
+			    			<div class="col-xs-2 videos">
+			    				<img src="images/1.jpg" class="img-circle img-responsive">
+			    			</div>
+			    			<div class="col-xs-7">
+			    				<h2 class="subs-name">Lorem ipsum dolor sit amet</h2>
+			    			</div>
+			    		</div>
+			    		<hr>
+			    		<div class="row">
+			    			<div class="col-xs-2">
+			    				<img src="images/4.jpg" class="img-circle img-responsive">
+			    			</div>
+			    			<div class="col-xs-7">
+			    				<h2 class="subs-name">Lorem ipsum dolor sit amet</h2>
+			    			</div>
+			    		</div>
+			    		<hr>
+			    		<div class="row">
+			    			<div class="col-xs-2">
+			    				<img src="images/6.jpg" class="img-circle img-responsive">
+			    			</div>
+			    			<div class="col-xs-7">
+			    				<h2 class="subs-name">Lorem ipsum dolor sit amet</h2>
+			    			</div>
+			    		</div>
+			    		<hr>
+			    		<div class="row">
+			    			<div class="col-xs-2">
+			    				<img src="images/4.jpg" class="img-circle img-responsive">
+			    			</div>
+			    			<div class="col-xs-7">
+			    				<h2 class="subs-name">Lorem ipsum dolor sit amet</h2>
+			    			</div>
+			    		</div>
+			    		<hr>
+			    		<div class="row">
+			    			<div class="col-xs-2">
+			    				<img src="images/7.jpg" class="img-circle img-responsive">
+			    			</div>
+			    			<div class="col-xs-7">
+			    				<h2 class="subs-name">Lorem ipsum dolor sit amet</h2>
+			    			</div>
+			    		</div>
+			    		<hr>
+			    	</div>
+			    </div>
 
 			  </div>
 
