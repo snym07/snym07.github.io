@@ -98,9 +98,9 @@
 }
 
 .preview{
-	position: absolute;
-	top: 70px;
-	left: 70px;
+	position: relative;
+	top: 5em;
+	left: 5em;
 }
 
 .item{
