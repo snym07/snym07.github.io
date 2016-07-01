@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- title -->
+	<title>Bootstrap practice</title>
+
+	<!-- meta tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- stylesheets -->
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.musejam.min.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	<link rel="stylesheet" type="text/css" href="css/genericons.css">
+
+</head>
+<body>
+
+	<!-- Navigation bar -->
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">
+	      	<img src="images/logo2.png" style="height:25px; width:auto; margin: auto 20px; ">
+	      </a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li class="active"><a href="#">Discover <span class="sr-only">(current)</span></a></li>
+	        <li><a href="#">Musefeed</a></li>
+	        <!-- <li>
+	        	<input type="text" name="search" placeholder="Search artists, events, venues and tags" size="40"><span class="search-icon"></span>
+	        </li> -->
+	      </ul>
+	      
+	      <ul class="nav navbar-nav navbar-right">
+	      <form class="navbar-form navbar-left" role="search">
+	        <div class="form-group">
+	          <input type="text" class="form-control" placeholder="Search artists, events, venues and tags" size="40"><button class="btn btn-default" style="color:grey; border:0px; border-left:1px"><span class="search-icon"></span></button>
+	        </div>
+	      </form>
+	      <form class="navbar-form navbar-left" role="search">
+	        <div class="form-group">
+	          <input type="text" class="form-control" placeholder="Mumbai" >
+	        </div>
+	      </form>
+	      	<!-- <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="#">Action</a></li>
+	            <li><a href="#">Another action</a></li>
+	            <li><a href="#">Something else here</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="#">Separated link</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="#">One more separated link</a></li>
+	          </ul>
+	        </li> -->
+	        <li><a href="#"><h4 class="glyphicon glyphicon-bell" style="margin:0;"></h4></a></li>
+	        <li><a href="#"><strong>SIGN IN / SIGN UP</strong></a></li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+
+	<!-- second nav bar -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7">
+				<ul class=" sec-nav nav nav-pills my-shadow">
+				  <li role="presentation"><a href="#">All</a></li>
+				  <li role="presentation"><a href="#">Artists</a></li>
+				  <li role="presentation"><a href="#">Events</a></li>
+				  <li role="presentation"><a href="#">Venues</a></li>
+				</ul>
+
+				<!-- main page content -->
+				<div class="main-container">
+
+				<!-- first container -->
+					<div class="item-container my-shadow">
+					<!-- item heading -->
+						<div class="item-heading col-xs-12">
+							<span class="pull-left">Top artists (2368)</span>
+							<span class="pull-right glyphicon glyphicon-triangle-right"></span>
+							<span class="pull-right glyphicon glyphicon-triangle-left"></span>
+						</div>
+					<!-- item elements -->
+						<div class="item-elements">
+							
+							<div class="col-xs-4 item">
+								<button class="btn btn-default preview">Preview</button>
+								<img src="images/ar.png" class="effect img-thumbnail">
+								<h4 class="pull-left">A R rahman</h4>
+								<div class="item-icons">
+									<span class="glyphicon glyphicon-option-horizontal pull-right"></span>
+									<span class="glyphicon glyphicon-heart pull-right"></span>
+								</div>
+								<div style="clear:both">
+									<small class="pull-left" style="margin-left:10px">Live | Rock | Hindi</small>
+								</div>
+							</div>
+
+							<div class="col-xs-4">
+								<button class="btn btn-default preview">Preview</button>
+								<img src="images/ar.png" class="effect img-thumbnail">
+								<h4 class="pull-left">Kailash Kher</h4>
+								<div class="item-icons">
+									<span class="glyphicon glyphicon-option-horizontal pull-right"></span>
+									<span class="glyphicon glyphicon-heart pull-right"></span>
+								</div>
+								<div style="clear:both">
+									<small class="pull-left" style="margin-left:10px">Folk | India pop</small>
+								</div>
+							</div>
+
+							<div class="col-xs-4">
+								<button class="btn btn-default preview">Preview</button>
+								<img src="images/shaan.png" class="effect img-thumbnail">
+								<h4 class="pull-left">Shaan</h4>
+								<div class="item-icons">
+									<span class="glyphicon glyphicon-option-horizontal pull-right"></span>
+									<span class="glyphicon glyphicon-heart pull-right"></span>
+								</div>
+								<div style="clear:both">
+									<small class="pull-left" style="margin-left:10px">EDM</small>
+								</div>
+							</div>
+
+						</div>
+						<button type="button" class="see-more btn btn-link btn-lg btn-block">See All ></button>
+					</div> <!-- first container end -->
+
+					<!-- Second container -->
+						<div class="item-container2 my-shadow">
+						<!-- item heading -->
+							<div class="item-heading col-xs-12">
+								<span class="pull-left">Trending Artist</span>
+							</div>
+						<!-- item elements -->
+							<div class="item-elements">
+								
+								<div class="row">
+									<div class="col-xs-4">
+										<img src="images/indian_ocean.png" class="img-responsive">
+									</div>
+									<div class="col-xs-8">
+										<div>
+											<h2 class="pull-left">Indian Ocean</h2>
+											<button class="btn btn-default pull-right"><span class="glyphicon glyphicon-play"></span> Preview</button>
+										</div>
+										<div style="clear:both">
+											<small>Live | Rock | Hindi</small>
+											<p>Indian Ocean, the pioneers of the fusion rock genre in India, is an
+											 Indian rock band formed in New Delhi in 1990. Susmit Sen, Asheem 
+											 Chakravart... <a href="#">Read More</a></p>
+										 </div>
+									</div>
+
+								</div>
+								<p style="border-bottom:1px solid #BDBDBD; padding:10px"></p>
+
+								<div class="row">
+									<div class="col-xs-3">
+										<h3 class="glyphicon glyphicon-heart"></h3><span style="padding:10px;"> 45 Muse</span>
+										
+									</div>
+									<div class="col-xs-5">
+										<h3 class="glyphicon glyphicon-comment"></h3><span style="padding:10px;"> 7 Comments</span>
+									</div>
+									<div class="col-xs-4">
+										<h3 class="glyphicon glyphicon-option-horizontal pull-right" style="padding:10px;"></h3>
+									</div>
+								</div>
+
+							</div>
+							
+						</div> <!-- second container end -->
+
+						<!-- Third container -->
+						<div class="item-container3 my-shadow">
+						<!-- item heading -->
+							<div class="item-heading col-xs-12">
+								<span class="pull-left">Upcoming Events</span>
+								<span class="pull-right glyphicon glyphicon-triangle-right"></span>
+								<span class="pull-right glyphicon glyphicon-triangle-left"></span>
+							</div>
+						<!-- item elements -->
+						<div class="row">
+							<div class="col-xs-12">
+								<h4>Wild City ft. Spryk &amp; UP7T</h4>
+								<small>8 Dec, Tuesday 02:14 pm to 02:14 pm</small>
+								<br><br>
+								<p>
+									Wild City presents A Journey Through Bass Music. Wild City continues its series
+									of homegrown live showcases with <strong>Spryk</strong> and <strong>UPT7</strong>... <a href="#">Read More</a>
+								</p>
+
+								<img src="images/wild.png" class="img-responsive">
+							</div>
+						</div>
+
+						<p style="border-bottom:1px solid #BDBDBD; padding:10px"></p>
+
+						<div class="row">
+							<div class="col-xs-3">
+								<h3 class="glyphicon glyphicon-heart"></h3><span style="padding:10px;"> 45 Muse</span>
+								
+							</div>
+							<div class="col-xs-5">
+								<h3 class="glyphicon glyphicon-comment"></h3><span style="padding:10px;"> 7 Comments</span>
+							</div>
+							<div class="col-xs-4">
+								<h3 class="glyphicon glyphicon-option-horizontal pull-right" style="padding:10px;"></h3>
+							</div>
+						</div>
+							
+						</div> <!-- third container end -->
+
+						<!-- Forth container -->
+					<div class="item-container my-shadow">
+					<!-- item heading -->
+						<div class="item-heading col-xs-12">
+							<span class="pull-left">Popular Venues</span>
+							<span class="pull-right glyphicon glyphicon-triangle-right"></span>
+							<span class="pull-right glyphicon glyphicon-triangle-left"></span>
+						</div>
+					<!-- item elements -->
+						<div class="row">
+							<div class="col-xs-6">
+								<img src="images/exo.png" class="img-responsive">
+								<div>
+									<h4 class="pull-left">EXO - The St. Regis</h4>
+									<h4 style="margin:10px" class="pull-right glyphicon glyphicon-option-horizontal"></h4>
+									 &nbsp;
+									<h4 style="margin:10px" class="pull-right glyphicon glyphicon-heart"></h4>
+									
+								</div>
+								<div style="clear:both">
+									<small>Bar | Nightclub | Lounge</small>
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<img src="images/royalty.png" class="img-responsive">
+								<div>
+									<h4 class="pull-left">Royalty</h4>
+									<h4 style="margin:10px" class="pull-right glyphicon glyphicon-option-horizontal"></h4>
+									 &nbsp;
+									<h4 style="margin:10px" class="pull-right glyphicon glyphicon-heart"></h4>
+									
+								</div>
+								<div style="clear:both">
+									<small>Club | Lounge</small>
+								</div>
+							</div>
+						</div>
+						
+					</div> <!-- forth container end -->
+
+						<!-- Fifth container -->
+						<div class="item-container3 my-shadow">
+						<!-- item heading -->
+							<div class="item-heading col-xs-12">
+								<span class="pull-left">Venues Nearby</span>
+								
+							</div>
+						<!-- item elements -->
+						<div class="row">
+							<div class="col-xs-12">
+								<h4>Social Offline - Todi Mil</h4>
+								<small>Opening time: 09:00 - 01:00 AM</small>
+								<br><br>
+
+								<img src="images/todi.png" class="img-responsive">
+
+								<br>
+								<p>
+									#242, Near Cafe Zoe, Mathuradas Mill Compound, Lower Parel, Mumbai
+								</p>
+								<p>
+									Nightclub | Electronic
+								</p>
+							</div>
+						</div>
+
+						<p style="border-bottom:1px solid #BDBDBD; padding:0px"></p>
+
+						<div class="row">
+							<div class="col-xs-3">
+								<h3 class="glyphicon glyphicon-heart"></h3><span style="padding:10px;"> 45 Muse</span>
+								
+							</div>
+							<div class="col-xs-5">
+								<h3 class="glyphicon glyphicon-comment"></h3><span style="padding:10px;"> 7 Comments</span>
+							</div>
+							<div class="col-xs-4">
+								<h3 class="glyphicon glyphicon-option-horizontal pull-right" style="padding:10px;"></h3>
+							</div>
+						</div>
+							
+						</div> <!-- fifth container end -->
+
+
+				</div>
+
+			</div> <!-- second nav bar end -->
+
+			<div class="col-md-4 col-xs-12" style="padding-left:3em;">
+				<span class="tags-heading">Tags</span>
+				
+				<div class="tags">
+					<a href="#"><span class="tags-val label label-default">Dubstep</span></a>
+					<a href="#"><span class="tags-val label label-default">International</span></a>
+					<a href="#"><span class="tags-val label label-default">Live</span></a>
+					<a href="#"><span class="tags-val label label-default">Electronic</span></a>
+					<a href="#"><span class="tags-val label label-default">Fusion</span></a>
+					<a href="#"><span class="tags-val label label-default">Indipop</span></a>
+					<a href="#"><span class="tags-val label label-default">Acid House</span></a>
+					<a href="#"><span class="tags-val label label-default">Psy Trance</span></a>
+					<a href="#"><span class="tags-val label label-default">Techno</span></a>
+					<a href="#"><span class="tags-val label label-default">Classical</span></a>
+					<a href="#"><span class="tags-val label label-default">Metal</span></a>
+					<a href="#"><span class="tags-val label label-default">Hip-Hop</span></a>
+					<a href="#"><span class="tags-val label label-default">Dubstep</span></a>
+					<a href="#"><span class="tags-val label label-default">International</span></a>
+					<a href="#"><span class="tags-val label label-default">Live</span></a>
+					<a href="#"><span class="tags-val label label-default">Electronic</span></a>
+					<a href="#"><span class="tags-val label label-default">Fusion</span></a>
+					<a href="#"><span class="tags-val label label-default">Indipop</span></a>
+					<a href="#"><span class="tags-val label label-default">Acid House</span></a>
+					<a href="#"><span class="tags-val label label-default">Psy Trance</span></a>
+					<a href="#"><span class="tags-val label label-default">Techno</span></a>
+					<a href="#"><span class="tags-val label label-default">Classical</span></a>
+					<a href="#"><span class="tags-val label label-default">Metal</span></a>
+					<a href="#"><span class="tags-val label label-default">Hip-Hop</span></a>
+				</div>
+
+				<!-- footer -->
+				<div class="footer">
+					<ul class="nav nav-pills">
+					  <li role="presentation"><a href="#"><small>About</small></a></li>
+					  <li role="presentation"><a href="#"><small>Careers</small></a></li>
+					  <li role="presentation"><a href="#"><small>Privacy</small></a></li>
+					  <li role="presentation"><a href="#"><small>Terms</small></a></li>
+					  <li role="presentation"><a href="#"><small>Help</small></a></li>
+					  <li role="presentation"><a href="#"><small>FAQ</small></a></li>
+					</ul>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+
+
+<!-- javascripts -->
+	<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	
+</body>
+</html>

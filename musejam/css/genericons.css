@@ -1,0 +1,26 @@
+@import url('genericons/genericons.css');
+
+/*
+
+
+	This file location is deprecated
+
+	Please link to the genericons.css file in the font folder instead
+
+
+*/
+.bell-icon:before {
+	content: '\f461';
+	font: normal 16px/1 'Genericons';
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.search-icon:before {
+	content: '\f400';
+	font: normal 16px/1 'Genericons';
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
