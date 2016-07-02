@@ -1,9 +1,9 @@
-$(".preview").hide();
-$(".effect").mouseover(function(){
-	//$(this).css("background-color", "blue");
-	$(".preview").show();
-	$(".effect").css("background-color", "pink");
-});
-$(".effect").mouseout(function(){
-	$(".preview").hide();
-});
+
+        // handle the mouseenter functionality
+        $(".img").mouseenter(function(){
+            $(this).addClass("hover");
+        })
+        // handle the mouseleave functionality
+        .mouseleave(function(){
+            $(this).removeClass("hover");
+        });
