@@ -9,6 +9,9 @@ body{
 	position: fixed;
 	/*margin: 50px auto;*/
 	z-index: 100;
+	margin-top: 70px;
+	padding-left: 5%;
+
 	
 }
 
@@ -23,13 +26,15 @@ body{
 
 /* affix class */
 .affix{
-	right: 10%;
-	top: 10%;
+	
+	right: 9%;
+	top: 9%;
+	
 }
 
 .tags{
 	padding-top: 1em;
-	padding-right: 8em;
+	padding-right: 6em;
 	padding-bottom: 3em;
 	border-bottom: 1px solid #BDBDBD;
 }
@@ -213,6 +218,13 @@ a.expand {
   
 }
 
+a.expand-small {
+  display: block;
+  position: absolute;
+  z-index: 100;
+  
+}
+
 .my-effect .overlay {
   bottom: 0;
   left: 0;
@@ -224,8 +236,18 @@ a.expand {
   left: 30%;
   right: 0;
   bottom: 60%;
-  margin: 0 auto -30px auto;
+  margin: 0 auto -18% auto;
 }
+
+.my-effect .overlay a.expand-small {
+  left: 20%;
+  right: 20%;
+  bottom: 55%;
+  margin: 0 auto -18% auto;
+
+}
+
+
 .my-effect .img.hover .overlay {
   height: 100%;
 }
