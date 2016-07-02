@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<!-- title -->
-	<title>Bootstrap practice</title>
+	<title>Musejam</title>
 
 	<!-- meta tags -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,7 +16,7 @@
 <body>
 
 	<!-- Navigation bar -->
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-default navbar-fixed-top">
 	  <div class="container-fluid">
 	    <!-- Brand and toggle -->
 	    <div class="navbar-header">
@@ -43,11 +43,11 @@
 	      
 	      <ul class="nav navbar-nav navbar-right">
 	      <form class="navbar-form navbar-left" role="search">
-	        <div class="form-group">
-	          <input type="text" class="form-control" placeholder="Search artists, events, venues and tags" size="40"><button class="btn btn-default" style="color:grey; border:0px; border-left:1px"><span class="search-icon"></span></button>
+	        <div class="">
+	          <input type="text" class="form-control" placeholder="Search artists, events, venues and tags" size="30"><button class="btn btn-default" style="color:grey; border:0px; border-left:1px"><span class="search-icon"></span></button>
 	        </div>
 	      </form>
-	      <form class="navbar-form navbar-left" role="search">
+	      <form class="navbar-form navbar-left hidden-sm hidden=md " role="search">
 	        <div class="form-group">
 	          <input type="text" class="form-control" placeholder="Mumbai" >
 	        </div>
@@ -71,16 +71,29 @@
 	  </div><!-- /.container-fluid -->
 	</nav>
 
+	<div class="container">
+	
+		<ul class="col-md-6 col-xs-11 col-sm-10 sec-nav nav nav-pills my-shadow">
+		  <li role="presentation"><a href="#">All</a></li>
+		  <li role="presentation"><a href="#">Artists</a></li>
+		  <li role="presentation"><a href="#">Events</a></li>
+		  <li role="presentation"><a href="#">Venues</a></li>
+		</ul>
+	
+	</div>
+
 	<!-- second nav bar -->
 	<div class="container">
 		<div class="row">
 			<div class="col-md-7">
-				<ul class=" sec-nav nav nav-pills my-shadow">
+				
+				<!-- <ul class="sec-nav nav nav-pills my-shadow">
 				  <li role="presentation"><a href="#">All</a></li>
 				  <li role="presentation"><a href="#">Artists</a></li>
 				  <li role="presentation"><a href="#">Events</a></li>
 				  <li role="presentation"><a href="#">Venues</a></li>
-				</ul>
+				</ul> -->
+				
 
 				<!-- main page content -->
 				<div class="main-container">
@@ -118,18 +131,20 @@
 									        <img src="images/ar.png" class="img-thumbnail" alt="">
 									        <div class="overlay">
 									            <a href="#" class="expand">
-									            	<button class="btn btn-default preview-btn">Preview</button>
+									            	<button class="btn btn-xs visible-xs btn-default preview-btn">Preview</button>
+									            	<button class="btn hidden-xs btn-default preview-btn">Preview</button>
 									            </a>
 									            <a class="close-overlay hidden">x</a>
 									        </div>
 									    </div>
 									</div>
 
-									<h4 class="pull-left">A R rahman</h4>
+									<h4 class="pull-left artist-name">A R rahman</h4>
 									<div class="item-icons">
-										<span class="glyphicon glyphicon-option-horizontal pull-right"></span>
-										<span class="glyphicon glyphicon-heart pull-right"></span>
+										<span class="glyphicon glyphicon-heart"></span>
+										<span class="glyphicon glyphicon-option-horizontal"></span>
 									</div>
+
 									<div style="clear:both">
 										<small class="pull-left" style="margin-left:10px">Live | Rock | Hindi</small>
 									</div>
@@ -142,18 +157,20 @@
 									        <img src="images/katy.jpg" class="img-thumbnail" alt="">
 									        <div class="overlay">
 									            <a href="#" class="expand">
-									            	<button class="btn btn-default preview-btn">Preview</button>
+									            	<button class="btn btn-xs visible-xs btn-default preview-btn">Preview</button>
+									            	<button class="btn hidden-xs btn-default preview-btn">Preview</button>
 									            </a>
 									            <a class="close-overlay hidden">x</a>
 									        </div>
 									    </div>
 									</div>
 
-									<h4 class="pull-left">Katy Perry</h4>
+									<h4 class="pull-left artist-name">Katy Perry</h4>
 									<div class="item-icons">
-										<span class="glyphicon glyphicon-option-horizontal pull-right"></span>
-										<span class="glyphicon glyphicon-heart pull-right"></span>
+										<span class="glyphicon glyphicon-heart"></span>
+										<span class="glyphicon glyphicon-option-horizontal"></span>
 									</div>
+
 									<div style="clear:both">
 										<small class="pull-left" style="margin-left:10px">Live | English</small>
 									</div>
@@ -166,17 +183,18 @@
 									        <img src="images/shaan.png" class="img-thumbnail" alt="">
 									        <div class="overlay">
 									            <a href="#" class="expand">
-									            	<button class="btn btn-default preview-btn">Preview</button>
+									            	<button class="btn btn-xs visible-xs btn-default preview-btn">Preview</button>
+									            	<button class="btn hidden-xs btn-default preview-btn">Preview</button>
 									            </a>
 									            <a class="close-overlay hidden">x</a>
 									        </div>
 									    </div>
 									</div>
 
-									<h4 class="pull-left">Shaan</h4>
+									<h4 class="pull-left artist-name">Shaan</h4>
 									<div class="item-icons">
-										<span class="glyphicon glyphicon-option-horizontal pull-right"></span>
-										<span class="glyphicon glyphicon-heart pull-right"></span>
+										<span class="glyphicon glyphicon-heart"></span>
+										<span class="glyphicon glyphicon-option-horizontal"></span>
 									</div>
 									<div style="clear:both">
 										<small class="pull-left" style="margin-left:10px">EDM</small>
@@ -209,17 +227,18 @@
 									        <img src="images/rihanna.jpg" class="img-thumbnail" alt="">
 									        <div class="overlay">
 									            <a href="#" class="expand">
-									            	<button class="btn btn-default preview-btn">Preview</button>
+									            	<button class="btn btn-xs visible-xs btn-default preview-btn">Preview</button>
+									            	<button class="btn hidden-xs btn-default preview-btn">Preview</button>
 									            </a>
 									            <a class="close-overlay hidden">x</a>
 									        </div>
 									    </div>
 									</div>
 
-									<h4 class="pull-left">Rihanna</h4>
+									<h4 class="pull-left artist-name">Rihanna</h4>
 									<div class="item-icons">
-										<span class="glyphicon glyphicon-option-horizontal pull-right"></span>
-										<span class="glyphicon glyphicon-heart pull-right"></span>
+										<span class="glyphicon glyphicon-heart"></span>
+										<span class="glyphicon glyphicon-option-horizontal"></span>
 									</div>
 									<div style="clear:both">
 										<small class="pull-left" style="margin-left:10px">Live | Rock | English</small>
@@ -233,17 +252,18 @@
 									        <img src="images/psy.jpg" class="img-thumbnail" alt="">
 									        <div class="overlay">
 									            <a href="#" class="expand">
-									            	<button class="btn btn-default preview-btn">Preview</button>
+									            	<button class="btn btn-xs visible-xs btn-default preview-btn">Preview</button>
+									            	<button class="btn hidden-xs btn-default preview-btn">Preview</button>
 									            </a>
 									            <a class="close-overlay hidden">x</a>
 									        </div>
 									    </div>
 									</div>
 
-									<h4 class="pull-left">Psy</h4>
+									<h4 class="pull-left artist-name">Psy</h4>
 									<div class="item-icons">
-										<span class="glyphicon glyphicon-option-horizontal pull-right"></span>
-										<span class="glyphicon glyphicon-heart pull-right"></span>
+										<span class="glyphicon glyphicon-heart"></span>
+										<span class="glyphicon glyphicon-option-horizontal"></span>
 									</div>
 									<div style="clear:both">
 										<small class="pull-left" style="margin-left:10px">Live | Rock | Korean</small>
@@ -257,17 +277,18 @@
 									        <img src="images/weekend.jpg" class="img-thumbnail" alt="">
 									        <div class="overlay">
 									            <a href="#" class="expand">
-									            	<button class="btn btn-default preview-btn">Preview</button>
+									            	<button class="btn btn-xs visible-xs btn-default preview-btn">Preview</button>
+									            	<button class="btn hidden-xs btn-default preview-btn">Preview</button>
 									            </a>
 									            <a class="close-overlay hidden">x</a>
 									        </div>
 									    </div>
 									</div>
 
-									<h4 class="pull-left">Weedend</h4>
+									<h4 class="pull-left artist-name">Weedend</h4>
 									<div class="item-icons">
-										<span class="glyphicon glyphicon-option-horizontal pull-right"></span>
-										<span class="glyphicon glyphicon-heart pull-right"></span>
+										<span class="glyphicon glyphicon-heart"></span>
+										<span class="glyphicon glyphicon-option-horizontal"></span>
 									</div>
 									<div style="clear:both">
 										<small class="pull-left" style="margin-left:10px">Rock | English</small>
@@ -298,20 +319,21 @@
 									        <img src="images/katy.jpg" class="img-thumbnail" alt="">
 									        <div class="overlay">
 									            <a href="#" class="expand">
-									            	<button class="btn btn-default preview-btn">Preview</button>
+									            	<button class="btn btn-xs visible-xs btn-default preview-btn">Preview</button>
+									            	<button class="btn hidden-xs btn-default preview-btn">Preview</button>
 									            </a>
 									            <a class="close-overlay hidden">x</a>
 									        </div>
 									    </div>
 									</div>
 
-									<h4 class="pull-left">Katy Perry</h4>
+									<h4 class="pull-left artist-name">Katy Perry</h4>
 									<div class="item-icons">
-										<span class="glyphicon glyphicon-option-horizontal pull-right"></span>
-										<span class="glyphicon glyphicon-heart pull-right"></span>
+										<span class="glyphicon glyphicon-heart"></span>
+										<span class="glyphicon glyphicon-option-horizontal"></span>
 									</div>
 									<div style="clear:both">
-										<small class="pull-left" style="margin-left:10px">Live | Rock | English</small>
+										<small class="pull-left" style="margin-left:10px">Rock | English</small>
 									</div>
 								</div>
 
@@ -322,17 +344,18 @@
 									        <img src="images/adele.png" class="img-thumbnail" alt="">
 									        <div class="overlay">
 									            <a href="#" class="expand">
-									            	<button class="btn btn-default preview-btn">Preview</button>
+									            	<button class="btn btn-xs visible-xs btn-default preview-btn">Preview</button>
+									            	<button class="btn hidden-xs btn-default preview-btn">Preview</button>
 									            </a>
 									            <a class="close-overlay hidden">x</a>
 									        </div>
 									    </div>
 									</div>
 
-									<h4 class="pull-left">Adele</h4>
+									<h4 class="pull-left artist-name">Adele</h4>
 									<div class="item-icons">
-										<span class="glyphicon glyphicon-option-horizontal pull-right"></span>
-										<span class="glyphicon glyphicon-heart pull-right"></span>
+										<span class="glyphicon glyphicon-heart"></span>
+										<span class="glyphicon glyphicon-option-horizontal"></span>
 									</div>
 									<div style="clear:both">
 										<small class="pull-left" style="margin-left:10px">Live | English</small>
@@ -346,17 +369,18 @@
 									        <img src="images/eminem.jpg" class="img-thumbnail" alt="">
 									        <div class="overlay">
 									            <a href="#" class="expand">
-									            	<button class="btn btn-default preview-btn">Preview</button>
+									            	<button class="btn btn-xs visible-xs btn-default preview-btn">Preview</button>
+									            	<button class="btn hidden-xs btn-default preview-btn">Preview</button>
 									            </a>
 									            <a class="close-overlay hidden">x</a>
 									        </div>
 									    </div>
 									</div>
 
-									<h4 class="pull-left">Eminem</h4>
+									<h4 class="pull-left artist-name">Eminem</h4>
 									<div class="item-icons">
-										<span class="glyphicon glyphicon-option-horizontal pull-right"></span>
-										<span class="glyphicon glyphicon-heart pull-right"></span>
+										<span class="glyphicon glyphicon-heart"></span>
+										<span class="glyphicon glyphicon-option-horizontal"></span>
 									</div>
 									<div style="clear:both">
 										<small class="pull-left" style="margin-left:10px">Rap | English</small>
@@ -396,8 +420,11 @@
 									</div>
 									<div class="col-xs-8">
 										<div>
-											<h2 class="pull-left">Indian Ocean</h2>
-											<button class="btn btn-default pull-right"><span class="glyphicon glyphicon-play"></span> Preview</button>
+											<h2 class="pull-left hidden-xs">Indian Ocean</h2>
+											<h4 class="pull-left visible-xs">Indian Ocean</h4>
+
+											<button class="btn hidden-xs btn-default pull-right"><span class="glyphicon glyphicon-play"></span> Preview</button>
+											<button class="btn btn-sm visible-xs btn-default pull-right"><span class="glyphicon glyphicon-play"></span> Preview</button>
 										</div>
 										<div style="clear:both">
 											<small>Live | Rock | Hindi</small>
@@ -411,14 +438,14 @@
 								<p style="border-bottom:1px solid #BDBDBD; padding:10px"></p>
 
 								<div class="row">
-									<div class="col-xs-3">
+									<div class="col-xs-5">
 										<h3 class="glyphicon glyphicon-heart"></h3><span style="padding:10px;"> 45 Muse</span>
 										
 									</div>
 									<div class="col-xs-5">
 										<h3 class="glyphicon glyphicon-comment"></h3><span style="padding:10px;"> 7 Comments</span>
 									</div>
-									<div class="col-xs-4">
+									<div class="col-xs-2">
 										<h3 class="glyphicon glyphicon-option-horizontal pull-right" style="padding:10px;"></h3>
 									</div>
 								</div>
@@ -461,14 +488,14 @@
 										<p style="border-bottom:1px solid #BDBDBD; padding:10px"></p>
 
 										<div class="row">
-											<div class="col-xs-3">
+											<div class="col-xs-5">
 												<h3 class="glyphicon glyphicon-heart"></h3><span style="padding:10px;"> 45 Muse</span>
 												
 											</div>
 											<div class="col-xs-5">
 												<h3 class="glyphicon glyphicon-comment"></h3><span style="padding:10px;"> 7 Comments</span>
 											</div>
-											<div class="col-xs-4">
+											<div class="col-xs-2">
 												<h3 class="glyphicon glyphicon-option-horizontal pull-right" style="padding:10px;"></h3>
 											</div>
 										</div>
@@ -505,14 +532,14 @@
 										<p style="border-bottom:1px solid #BDBDBD; padding:10px"></p>
 
 										<div class="row">
-											<div class="col-xs-3">
+											<div class="col-xs-5">
 												<h3 class="glyphicon glyphicon-heart"></h3><span style="padding:10px;"> 45 Muse</span>
 												
 											</div>
 											<div class="col-xs-5">
 												<h3 class="glyphicon glyphicon-comment"></h3><span style="padding:10px;"> 7 Comments</span>
 											</div>
-											<div class="col-xs-4">
+											<div class="col-xs-2">
 												<h3 class="glyphicon glyphicon-option-horizontal pull-right" style="padding:10px;"></h3>
 											</div>
 										</div>
@@ -552,7 +579,7 @@
 												    </div>
 												</div>
 												<div>
-													<h4 class="pull-left">EXO - The St. Regis</h4>
+													<h4 class="pull-left">EXO</h4>
 													<h4 style="margin:10px" class="pull-right glyphicon glyphicon-option-horizontal"></h4>
 													 &nbsp;
 													<h4 style="margin:10px" class="pull-right glyphicon glyphicon-heart"></h4>
@@ -639,7 +666,7 @@
 												    </div>
 												</div>
 												<div>
-													<h4 class="pull-left">EXO - The St. Regis</h4>
+													<h4 class="pull-left">EXO</h4>
 													<h4 style="margin:10px" class="pull-right glyphicon glyphicon-option-horizontal"></h4>
 													 &nbsp;
 													<h4 style="margin:10px" class="pull-right glyphicon glyphicon-heart"></h4>
@@ -685,14 +712,14 @@
 						<p style="border-bottom:1px solid #BDBDBD; padding:0px"></p>
 
 						<div class="row">
-							<div class="col-xs-3">
+							<div class="col-xs-5">
 								<h3 class="glyphicon glyphicon-heart"></h3><span style="padding:10px;"> 45 Muse</span>
 								
 							</div>
 							<div class="col-xs-5">
 								<h3 class="glyphicon glyphicon-comment"></h3><span style="padding:10px;"> 7 Comments</span>
 							</div>
-							<div class="col-xs-4">
+							<div class="col-xs-2">
 								<h3 class="glyphicon glyphicon-option-horizontal pull-right" style="padding:10px;"></h3>
 							</div>
 						</div>
@@ -704,7 +731,7 @@
 
 			</div> <!-- second nav bar end -->
 
-			<div class="col-md-4 col-xs-12" style="padding-left:3em;">
+			<div class="col-md-4 hidden-xs hidden-sm" style="padding-left:3em;" data-spy="affix" data-offset-top="0" >
 				<span class="tags-heading">Tags</span>
 				
 				<div class="tags">
