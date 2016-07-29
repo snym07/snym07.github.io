@@ -1,0 +1,82 @@
+body{
+	/*overflow-x: hidden;*/
+}
+
+.search-bar input{
+	color: white;
+}
+
+/* :::::::::::::::: Left container of the page */
+.left-page{
+	margin-top: 64px;
+	/*background-color: pink;*/
+}
+
+/* :::::::::::::::: middle container of new feeds */
+.new-feeds{
+	margin-top: 84px;
+}
+
+/* status update */
+.status-update{
+	background-color: red;
+	padding: 20px;
+}
+
+/* story */
+
+.story{
+	padding: 20px;
+}
+
+.like-comment-share{
+	background-color: white;
+	padding: 10px;
+}
+
+.like-comment-share a span{
+	display: inline-block;
+	margin-top: 0px;
+	vertical-align: middle;
+}
+
+.like-comment-share a{
+	color: #3F51B5;
+	cursor: pointer;
+	margin-right: 20px;
+}
+
+.like-comment-share a:hover{
+	text-decoration: none;
+}
+
+.likes{
+	background-color: #EEEEEE;
+	padding: 10px;
+}
+
+.like-color{
+	color: #3F51B5;
+}
+
+/* Comments */
+
+.comments{
+	background-color: #EEEEEE;
+	padding: 20px;
+}
+
+.user-avatar{
+	margin-right:10px;
+}
+
+.user-comment{
+	width: 100%;
+}
+
+/* ::::::::::::::::::::: right container of the page */
+.right-page{
+	margin-top: 84px;
+	position: fixed;
+	right: 0;
+}
