@@ -14,7 +14,7 @@ body{
 
 /* :::::::::::::::: middle container of new feeds */
 .new-feeds{
-	margin-top: 84px;
+	margin-top: 74px;
 }
 
 /* status update */
@@ -24,9 +24,17 @@ body{
 }
 
 /* story */
-
+/* not used */
 .story{
-	padding: 20px;
+	padding: 10px 20px;
+}
+
+.styles-desktop{
+	padding: 10px 10px;
+}
+
+.styles-mobile{
+	padding: 5px 10px;
 }
 
 .like-comment-share{
@@ -51,7 +59,7 @@ body{
 }
 
 .likes{
-	background-color: #EEEEEE;
+	background-color: #F5F5F5;
 	padding: 10px;
 }
 
@@ -62,7 +70,7 @@ body{
 /* Comments */
 
 .comments{
-	background-color: #EEEEEE;
+	background-color: #F5F5F5;
 	padding: 20px;
 }
 
@@ -76,7 +84,8 @@ body{
 
 /* ::::::::::::::::::::: right container of the page */
 .right-page{
-	margin-top: 84px;
+	margin-top: 74px;
 	position: fixed;
-	right: 0;
+	right: 0px;
+	padding:10px 20px 10px 10px;
 }
