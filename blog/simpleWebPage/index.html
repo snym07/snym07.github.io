@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A simple HTML page</title>
+	<link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+	<style>
+		html,body{
+			height: 100%;
+		}
+		body{
+			background: url('images/bg_blur.png') center / cover;
+			font-family: sans-serif;
+			overflow: hidden;
+		}
+		h1{
+			text-align: center;
+			font-family: 'Dancing Script', cursive;
+			font-size: 40px;
+		}
+		h2{
+			font-family: 'Tangerine', cursive;
+		}
+		p{
+			background-color: white;
+			margin: 20px;
+			padding:20px;
+			border-radius: 2px;
+		}
+		img{
+			position: absolute;
+			right: 20px;
+			display: block;
+			margin: 20px auto;
+			width:auto;
+			height: 400px;
+		}
+		.bg{
+			background : url('images/bg.jpg') center / cover;
+			height:600px;
+			width: 70%;
+			margin:0 auto;
+			padding: 0;
+			border-radius: 3px;
+		}
+		.bg h2{
+			width:40%;
+			float: right;
+			margin:50px;
+			padding:50px;
+			font-size: 36px;
+		}
+		.bg h2 button{
+			float: right;
+			background-color: #F44336;
+			color: white;
+			border:none;
+			margin:30px 25%;
+			height: 50px;
+			width: 200px;
+			border-radius: 5px;
+			font-size: 20px;
+		}
+		.shadow{
+			box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2); 
+		}
+		.left-element{
+			background-color: #009688;
+			float: left;
+			height: 400px;
+			width:50%;
+			margin: 20px auto;
+		}
+		.right-element{
+			background-color: #FF5722;
+			float: right;
+			height: 400px;
+			width: 49%;
+			margin: 20px auto;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Some Heading</h1>
+	<div class="bg shadow">
+		<h2>Hello There! <br> <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi recusandae tenetur, accusamus beatae laudantium quis enim voluptatem reprehenderit ut. Necessitatibus maiores ab voluptate beatae aliquid optio, hic deleniti nemo inventore!
+		<button>Click Me!</button>
+		</h2>
+		
+	</div>
+	
+	<!-- <div class="left-element"></div>
+	<div class="right-element"></div> -->
+
+</body>
+</html>
