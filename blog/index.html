@@ -43,7 +43,7 @@
     </style>
 
   </head>
-  <body>
+  <body onload="loadFile()">
     <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
       <main class="mdl-layout__content">
         <div class="demo-blog__posts mdl-grid">
@@ -220,12 +220,23 @@
       });
     });
   </script> -->
-  <script src="js/canvas-nest.min.js"></script>
-    <script 
+  <div id="canvas-bg"></div>
+  <script type="text/javascript">
+    function loadFile(){
+      var myFile = document.createElement("script");
+      myFile.type = "text/javascript";
+      myFile.src = "js/canvas-nest.min.js";
+      //myFile.setAttribute("src", "js/canvas-nest.min.js");
+      if(screen.width >= 768)
+        document.getElementById("canvas-bg").appendChild(myFile);
+    };
+  </script>
+  <!-- <script src="js/canvas-nest.min.js"></script> -->
+<!--     <script 
 		  color="255,255,255" 
 		  opacity='1' 
 		  zIndex="-2" 
       count="320"
 		  src="js/canvas-nest.min.js">
-		</script>
+		</script> -->
 </html>
