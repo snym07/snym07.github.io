@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Sanyam Kumar blog">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Blog</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/me.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Blog">
+    <link rel="apple-touch-icon-precomposed" href="images/me.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/me.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="images/me.png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.green-red.min.css" /> 
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+    body{
+    	background-color: #212121;
+    }
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+    </style>
+
+  </head>
+  <body>
+    <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
+      <main class="mdl-layout__content">
+        <div class="demo-blog__posts mdl-grid">
+
+        <!-- Post 1 (most recent post) -->
+        <!-- here coffee-pic class is for blog post background image in style.css -->
+          <div class="mdl-card coffee-pic mdl-cell mdl-cell--8-col">
+            <div class="mdl-card__media mdl-color-text--grey-50">
+              <h3><a href="entry.html">First Blog</a></h3>
+            </div>
+            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+              <div class="minilogo"></div>
+              <div>
+                <strong>Title or category like AI</strong>
+                <span>19th Jan 2017</span>
+              </div>
+            </div>
+          </div>
+          <!-- ends Post 1 -->
+
+          <!-- Immutable About Card -->
+          <div class="mdl-card something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop">
+            <a href="http://snym07.github.io/">
+              <button class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent">
+                <!-- github icon -->
+                  <svg style="width:30px;height:30px" viewBox="0 0 24 24">
+                    <path fill="#ffffff" d="M20.38,8.53C20.54,8.13 21.06,6.54 20.21,4.39C20.21,4.39 18.9,4 15.91,6C14.66,5.67 13.33,5.62 12,5.62C10.68,5.62 9.34,5.67 8.09,6C5.1,3.97 3.79,4.39 3.79,4.39C2.94,6.54 3.46,8.13 3.63,8.53C2.61,9.62 2,11 2,12.72C2,19.16 6.16,20.61 12,20.61C17.79,20.61 22,19.16 22,12.72C22,11 21.39,9.62 20.38,8.53M12,19.38C7.88,19.38 4.53,19.19 4.53,15.19C4.53,14.24 5,13.34 5.8,12.61C7.14,11.38 9.43,12.03 12,12.03C14.59,12.03 16.85,11.38 18.2,12.61C19,13.34 19.5,14.23 19.5,15.19C19.5,19.18 16.13,19.38 12,19.38M8.86,13.12C8.04,13.12 7.36,14.12 7.36,15.34C7.36,16.57 8.04,17.58 8.86,17.58C9.69,17.58 10.36,16.58 10.36,15.34C10.36,14.11 9.69,13.12 8.86,13.12M15.14,13.12C14.31,13.12 13.64,14.11 13.64,15.34C13.64,16.58 14.31,17.58 15.14,17.58C15.96,17.58 16.64,16.58 16.64,15.34C16.64,14.11 16,13.12 15.14,13.12Z" />
+                </svg>
+
+                <span class="visuallyhidden">Github</span>
+              </button>
+            </a>
+          <!-- ends About card -->
+
+          <!-- Post 2 -->
+            <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600">
+              <img src="images/me.png">
+                Sanyam Kumar
+              <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi numquam harum facere velit perferendis, eos minima officiis voluptate ab ducimus consequatur veniam repudiandae, sunt alias nesciunt iste quidem totam? Placeat.</p>
+              </div>
+              <span class="mdl-chip mdl-chip--contact">
+                  <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">
+                    <i class="material-icons" style="padding-top:4px">mail</i>
+                  </span>
+                  <span class="mdl-chip__text">sanyamkumar007@gmail.com</span>
+              </span>
+            </div>
+            <!-- ends Post 2 -->
+          </div>
+          
+          <!-- Post 3 -->
+          <!-- here on-the-road-again class is for blog post background image in style.css -->
+          <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col">
+            <div class="mdl-card__media mdl-color-text--grey-50">
+              <h3><a href="entry.html">Second Blog</a></h3>
+            </div>
+            <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
+              Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
+            </div>
+            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+              <div class="minilogo"></div>
+              <div>
+                <strong>Title or category like AI</strong>
+                <span>19th Jan 2017</span>
+              </div>
+            </div>
+          </div>
+          <!-- ends Post 3 -->
+
+          <!-- Post 4 -->
+          <div class="mdl-card amazing mdl-cell mdl-cell--12-col">
+            <div class="mdl-card__title mdl-color-text--grey-50">
+              <h3 class="quote"><a href="entry.html">A blog title with no Picture</a></h3>
+            </div>
+            <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+              Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
+            </div>
+            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+              <div class="minilogo"></div>
+              <div>
+                <strong>Title or category like AI</strong>
+                <span>19th Jan 2017</span>
+              </div>
+            </div>
+          </div>
+          <!-- ends Post 4 -->
+
+          <!-- Post 5 -->
+          <div class="mdl-card shopping mdl-cell mdl-cell--12-col">
+            <div class="mdl-card__media mdl-color-text--grey-50">
+              <h3><a href="entry.html">Shopping</a></h3>
+            </div>
+            <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+              Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
+            </div>
+            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+              <div class="minilogo"></div>
+              <div>
+                <strong>Title or category like AI</strong>
+                <span>19th Jan 2017</span>
+              </div>
+            </div>
+          </div>
+          <!-- ends Post 5 -->
+
+          <!-- More Button -->
+          <!-- <nav class="demo-nav mdl-cell mdl-cell--12-col">
+            <div class="section-spacer"></div>
+            <a href="entry.html" class="demo-nav__button" title="show more">
+              More
+              <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                <i class="material-icons" role="presentation">arrow_forward</i>
+              </button>
+            </a>
+          </nav> -->
+        </div>
+
+        <!-- Footer -->
+        <footer class="mdl-mini-footer">
+          <div class="mdl-mini-footer--left-section">
+          <!-- Facebook link -->
+          <a href="https://www.facebook.com/XsanyamX">
+            <button class="mdl-mini-footer--social-btn social-btn">
+              <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                  <path fill="#000000" d="M19,4V7H17A1,1 0 0,0 16,8V10H19V13H16V20H13V13H11V10H13V7.5C13,5.56 14.57,4 16.5,4M20,2H4A2,2 0 0,0 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z" />
+              </svg>
+              <span class="visuallyhidden">Facebook</span>
+            </button>
+          </a>
+          
+          <!-- Instagram Link -->
+          <a href="https://www.instagram.com/snym07/">
+            <button class="mdl-mini-footer--social-btn social-btn">
+              <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                  <path fill="#000000" d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+              </svg>
+              <span class="visuallyhidden">Instagram</span>
+            </button>
+          </a>
+
+          <!-- Github Profile Link -->
+          <a href="https://github.com/snym07">
+            <button class="mdl-mini-footer--social-btn social-btn">
+              <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                  <path fill="#000000" d="M4,2H20A2,2 0 0,1 22,4V20A2,2 0 0,1 20,22H14.85C14.5,21.92 14.5,21.24 14.5,21V18.26C14.5,17.33 14.17,16.72 13.81,16.41C16.04,16.16 18.38,15.32 18.38,11.5C18.38,10.39 18,9.5 17.35,8.79C17.45,8.54 17.8,7.5 17.25,6.15C17.25,6.15 16.41,5.88 14.5,7.17C13.71,6.95 12.85,6.84 12,6.84C11.15,6.84 10.29,6.95 9.5,7.17C7.59,5.88 6.75,6.15 6.75,6.15C6.2,7.5 6.55,8.54 6.65,8.79C6,9.5 5.62,10.39 5.62,11.5C5.62,15.31 7.95,16.17 10.17,16.42C9.89,16.67 9.63,17.11 9.54,17.76C8.97,18 7.5,18.45 6.63,16.93C6.63,16.93 6.1,15.97 5.1,15.9C5.1,15.9 4.12,15.88 5,16.5C5,16.5 5.68,16.81 6.14,17.97C6.14,17.97 6.73,19.91 9.5,19.31V21C9.5,21.24 9.5,21.92 9.14,22H4A2,2 0 0,1 2,20V4A2,2 0 0,1 4,2Z" />
+              </svg>
+              <span class="visuallyhidden">Github</span>
+            </button>
+          </a>
+          </div>
+          <div class="mdl-mini-footer--right-section">
+            Made with &hearts; by Sanyam Kumar<br>&copy; 2017
+          </div>
+        </footer>
+        <!-- ends Footer -->
+      </main>
+      <div class="mdl-layout__obfuscator"></div>
+    </div>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  </body>
+  <!-- <script>
+    Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
+      var link = el.querySelector('a');
+      if(!link) {
+        return;
+      }
+      var target = link.getAttribute('href');
+      if(!target) {
+        return;
+      }
+      el.addEventListener('click', function() {
+        location.href = target;
+      });
+    });
+  </script> -->
+  <script src="js/canvas-nest.min.js"></script>
+    <script 
+		  color="255,255,255" 
+		  opacity='1' 
+		  zIndex="-2" 
+		  count="320" 
+		  src="js/canvas-nest.min.js">
+		</script>
+</html>
