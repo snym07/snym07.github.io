@@ -53,14 +53,16 @@
   </head>
   <body>
 
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
+    <!-- facebook plugin -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <!-- ends facebook plugin -->
 
     <div class="demo-blog demo-blog--blogpost mdl-layout mdl-js-layout has-drawer is-upgraded">
       <main class="mdl-layout__content">
@@ -82,6 +84,7 @@
               </div>
               <div class="section-spacer"></div>
               <div class="meta__favorites">
+              <!-- facebook like and share button -->
                 <div class="fb-like" data-href="http://snym07.github.io/blog/post01.html" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
               </div>
               
@@ -102,11 +105,9 @@
               </p>
             </div>
             <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments">
-              
+              <!-- facebook comments section -->
               <div class="comment mdl-color-text--grey-700">
-                
-                <div class="fb-comments" data-href="http://snym07.github.io/blog/post01.html" data-numposts="5"></div>
-                
+                <div class="fb-comments" data-href="http://snym07.github.io/blog/post01.html" data-width="100%" data-numposts="5"></div>
               </div>
             </div>
           </div>
