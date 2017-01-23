@@ -168,7 +168,7 @@ body .demo-blog {
 }
 
 /* first blog post pic */
-.demo-blog.is-small-screen .demo-blog__posts > .mdl-card.coffee-pic {
+.demo-blog.is-small-screen .demo-blog__posts > .mdl-card.brain-pic {
   -webkit-order: 0;
       -ms-flex-order: 0;
           order: 0;
@@ -178,8 +178,8 @@ body .demo-blog {
       -ms-flex-order: -1;
           order: -1;
 }
-.demo-blog .coffee-pic .mdl-card__media {
-  background-image: url('../images/coffee.jpg');
+.demo-blog .brain-pic .mdl-card__media {
+  background-image: url('../images/brain.jpg');
 }
 .demo-blog .something-else .mdl-card__media {
   display: -webkit-flex;
@@ -282,7 +282,7 @@ body .demo-blog {
   background-color: transparent;
 }
 .demo-blog--blogpost .demo-blog__posts > .mdl-card .mdl-card__media {
-  background-image: url('images/road_big.jpg');
+  background-image: url('../images/brain.jpg');
   height: 280px;
 }
 .demo-blog--blogpost .comments {
